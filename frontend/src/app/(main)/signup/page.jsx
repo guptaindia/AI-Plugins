@@ -57,10 +57,10 @@ const Signup = () => {
 
   return (
     <form onSubmit={signupForm.handleSubmit}>
-      <div className=" bg-grey-lighter min-h-screen flex flex-col">
+      <div className=" bg-grey-lighter min-h-screen flex flex-col ">
         <div className=" container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
-          <div className="bg-white px-6 py-8 rounded shadow-md text-black w-full">
-            <h1 className="mb-8 text-3xl text-center">
+          <div className=" px-6 py-8 bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-gray-800 dark:border-gray-700 ">
+            <h1 className="mb-8 text-center block text-3xl font-bold text-gray-800 dark:text-white">
               <img className="h-20 m-auto" src="\iconsign.webp" />
               Sign up</h1>
 
@@ -110,14 +110,14 @@ const Signup = () => {
               }
               <input
                 type={showPassword ? "text" : "password"}
-                className="border-2 hover:border-slate-600  w-full p-3 rounded mb-4"
+                className=" bg-gray-100 py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600 "
                 name="password"
                 onChange={signupForm.handleChange}
                 values={signupForm.values.password }
                 placeholder="Enter password" />
 <button
   type="button"
-  className="text-black dark:text-white"
+  className="text-black dark:text-white mx-4 mb-4"
   onClick={() => {
     setShowPassword((prev) => !prev);
   }}
@@ -135,7 +135,7 @@ const Signup = () => {
               }
               <input
                 type="password"
-                className="border-2 hover:border-slate-600  w-full p-3 rounded mb-4"
+                className=" bg-gray-100 py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600 mb-4"
                 name="confirmPassword"
                 onChange={signupForm.handleChange}
                 values={signupForm.values.confirmPassword }
@@ -144,7 +144,7 @@ const Signup = () => {
             </div>
           
             <button type="Submit"
-              className="w-full text-center py-3 rounded bg-green-800 text-white hover:bg-green-dark focus:outline-none my-1"
+              className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg  text-white  focus:outline-none my-1 bg-blue-600 hover:bg-blue-700 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 ..."
             >Create Account </button>
 
             <div className="text-center text-sm text-grey-dark mt-4">
