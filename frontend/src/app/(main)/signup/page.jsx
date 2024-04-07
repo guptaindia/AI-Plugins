@@ -1,8 +1,9 @@
 'use client'
 import React, { useState } from 'react'
 import { useFormik } from 'formik';
-//import Link from 'next/link';
+
 import * as Yup from 'yup';
+import toast from 'react-hot-toast';
 
 const signupSchema = Yup.object().shape({
   fullname: Yup.string().required('Enter your name')
@@ -41,13 +42,13 @@ const Signup = () => {
             })
             .then((res) => {
                 if(res.status === 200){
-                    toast.success('post uploaded successfully');
+                    toast.success('Signup Successfull');
                 }else {
-                    toast.error('error in uploading post')
+                    toast.error('error in Signing up')
                 }
             }).catch((err) => {
                 console.log(err);
-                toast.error('error in uploading post')
+                toast.error('error')
             });
     },
     validationSchema: signupSchema
