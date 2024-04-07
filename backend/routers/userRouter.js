@@ -1,7 +1,7 @@
 const express = require('express');
+const router = express.Router();
 const Model= require('../models/userModel');
 
-const router = express.Router();
 
 router.post('/add', (req,res) => {
     console.log(req.body);
@@ -11,7 +11,7 @@ router.post('/add', (req,res) => {
               res.status(200).json(result);                              
     }).catch((err) => {
         console.log(err);
-        res.status(500).json(result);
+        res.status(500).json(err);
     }); 
 });
 

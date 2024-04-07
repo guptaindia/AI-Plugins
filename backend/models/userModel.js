@@ -2,7 +2,7 @@ const {Schema, model} = require('../connection');
 
 const mySchema  =  new Schema({
 
-    title:{type: String, required: true},
+    // title:{type: String, required: true},
     name : String,
     email :String,
     password :String,
