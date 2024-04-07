@@ -74,7 +74,7 @@ const Signup = () => {
               }
               <input
                 type="text"
-                className=" border-2 hover:border-slate-600  w-full p-3 rounded mb-4"
+                className=" mb-4 bg-gray-100 py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
                 name="fullname"
                 onChange={signupForm.handleChange}
                 values={signupForm.values.fullname}
@@ -91,7 +91,7 @@ const Signup = () => {
               }
               <input
                 type="email"
-                className="border-2 hover:border-slate-600  w-full p-3 rounded mb-4"
+                className="bg-gray-100 py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600 mb-4"
                 name="email"
                 onChange={signupForm.handleChange}
                 values={signupForm.values.email}
