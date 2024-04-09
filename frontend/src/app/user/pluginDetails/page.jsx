@@ -7,16 +7,25 @@ import React from 'react'
 const pluginDetails = () => {
   return (
     <div>
-      <header className='bg-blue-200 my-8 py-8'>
-        <div>
-          <div className='text-center'>
-            <h1 className='text-2xl font-semibold text-gray-500 capitalize lg:text-3xl dark:text-white'>
-            Plugin Details</h1>
-            <p className='max-w-lg mx-auto mt-4 text-black'>
-              various Plugins are available for the usage
-            </p>
+      <header className=''>
+        <div className="bg-gray-100  sm:py-8 lg:p-4">
+          <div className="mx-auto max-w-screen-2x1 px-4 md:px-8 ">
+            <div className="rounded-lg bg-gray-100 px-4 py-6 md:py-8 lg:py-12 bg-gradient-to-r from-purple-500 to-pink-500">
+              <p className="mb-2 text-center font-semibold text-indigo-500 md:mb-3 lg:text-lg">
+                Introducing
+              </p>
+              <h2 className="mb-4 text-center text-2xl font-bold text-white md:mb-6 lg:text-3xl">
+                Revolutionary way to build the web
+              </h2>
+              <p className="mx-auto max-w-screen-md text-center text-gray-600 md:text-lg">
+                This is a section of some simple filler text, also known as placeholder
+                text. It shares some characteristics of a real written text but is
+                random or otherwise generated.
+              </p>
+            </div>
           </div>
         </div>
+
       </header>
       <div className='bg-orange-400 grid grid-cols-5 divide-x '>
 
@@ -30,23 +39,8 @@ const pluginDetails = () => {
   This component comes with some `rtl` classes. Please remove them if they are not needed in your project.
 */}
   <article className="rounded-lg border border-gray-100 bg-white p-4 shadow-sm transition hover:shadow-lg sm:p-6">
-    <span className="inline-block rounded bg-blue-600 p-2 text-white">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path d="M12 14l9-5-9-5-9 5 9 5z" />
-        <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-        />
-      </svg>
+    <span className="inline-block rounded  p-2 text-white">
+      <img className='h-20 m-auto' src="\detail-icon.webp"/>
     </span>
     <a href="#">
       <h3 className="mt-0.5 text-lg font-medium text-gray-900">
@@ -82,7 +76,7 @@ const pluginDetails = () => {
         <div className='col-span-3 bg-blue-400 display-flex border-double border-4 border-gray-500'>
           <h1 className='text-center font-bold lg:text-3xl'>code blocks</h1>
       {<CodeBlock
-        text={'<div>something lorem</div>'}
+        text={'<div>something </div>'}
         language={'html'}
         showLineNumbers={true}
         theme={dracula}

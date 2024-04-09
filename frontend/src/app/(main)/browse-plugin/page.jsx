@@ -23,23 +23,15 @@ const BrowsePlugin = () => {
 
                     <div className="grid grid-cols-1 gap-8 mt-8 lg:grid-cols-3">
                         <div>
-                            <img
-                                className="relative z-10 object-cover w-full rounded-md h-96"
-                                src="https://images.unsplash.com/photo-1644018335954-ab54c83e007f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                                alt=""
-                            />
-                            <div className="relative z-20 max-w-lg p-6 mx-auto -mt-20 bg-white rounded-md shadow dark:bg-gray-900">
-                                <a
-                                    href="#"
-                                    className="font-semibold text-gray-800 hover:underline dark:text-white md:text-xl"
-                                >
-                                    All the features you want to know
-                                </a>
-                                <p className="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-                                    veritatis sint autem nesciunt, laudantium quia tempore delect
-                                </p>
-                                <p className="mt-3 text-sm text-blue-500">21 October 2019</p>
+                            <div className="max-w-xs rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800">
+                                <img src="https://source.unsplash.com/random/300x300/?2" alt="" className="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500" />
+                                <div className="flex flex-col justify-between p-6 space-y-8">
+                                    <div className="space-y-2">
+                                        <h2 className="text-3xl font-semibold tracking-wide">Donec lectus leo</h2>
+                                        <p className="dark:text-gray-800">Curabitur luctus erat nunc, sed ullamcorper erat vestibulum eget.</p>
+                                    </div>
+                                    <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-600 dark:text-gray-50" fdprocessedid="i7etku">Read more</button>
+                                </div>
                             </div>
                         </div>
                         <div>
