@@ -21,6 +21,7 @@ const pluginDetails = () => {
                 This is a section of some simple filler text, also known as placeholder
                 text. It shares some characteristics of a real written text but is
                 random or otherwise generated.
+                
               </p>
             </div>
           </div>
@@ -73,7 +74,7 @@ const pluginDetails = () => {
         </div>
 
 
-        <div className='col-span-3 bg-blue-400 display-flex border-double border-4 border-gray-500'>
+        <div className='col-span-3 bg-white display-flex border-double border-4 border-gray-500'>
           <h1 className='text-center font-bold lg:text-3xl'>code blocks</h1>
       {<CodeBlock
         text={'<div>something </div>'}
