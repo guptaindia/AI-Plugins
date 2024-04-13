@@ -30,7 +30,7 @@ const pluginDetails = () => {
       </header>
       <div className='grid grid-cols-5 divide-x '>
 
-         <div className='col-span-2 px-2 ml-2 '> {/* corners are not rounded */}
+         <div className='col-span-2 px-1 ml-2 '> {/* corners are not rounded */}
           <h1 className=' text-center font-bold lg:text-3xl border-solid border-2 border-gray-500'>Plugin details </h1>
           <div>
             <>
