@@ -4,3 +4,30 @@
     background-position: center;
     height: 40vh;
 }
+
+.bg:hover{
+            transform: scale(1);
+             transition-duration: 0.5s; 
+             transition:0.5s;
+
+    background-image: url('https://simseo.fr/wp-content/uploads/2023/10/La-nouvelle-generation-de-robotique-intelligente-ameliore-lautomatisation-industrielle.jpg')
+}
+
+.property:hover{
+           opacity: 0.3;
+             transform: scale(1.1);
+             transition-duration: 0.5s; 
+             transition:0.5s;
+          
+  
+}
+ .text:hover{
+    
+    transform: scale(1.5);
+    transition-duration: 0.5s; 
+    transition:1s;
+    text-decoration-color: aqua;
+ }
+
+ 
+  

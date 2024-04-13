@@ -6,38 +6,25 @@ const BrowsePlugin = () => {
         <div>
             <header className={classes.bg}>
                 <div className="flex items-center justify-center text-center h-full backdrop-blur-md">
-                    <div>
+                    <div className={classes.text} >
 
                         <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">
-                            From the blog
+                            WELCOME TO AI PLUGIT
                         </h1>
                         <p className="max-w-lg mx-auto mt-4 text-white">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veritatis
-                            sint autem nesciunt, laudantium quia tempore delect
+                            CHOOSE  THE  MODEL  GIVEN  BELOW
                         </p>
                     </div>
                 </div>
-            </header>               
+            </header>
             <section className="bg-white dark:bg-gray-900">
                 <div className="container px-6 py-10 mx-auto">
 
                     <div className="grid grid-cols-1 gap-8 mt-8 lg:grid-cols-3">
                         <div>
-                            <div className="max-w-xs rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800">
-                                <img src="https://source.unsplash.com/random/300x300/?2" alt="" className="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500" />
-                                <div className="flex flex-col justify-between p-6 space-y-8">
-                                    <div className="space-y-2">
-                                        <h2 className="text-3xl font-semibold tracking-wide">Donec lectus leo</h2>
-                                        <p className="dark:text-gray-800">Curabitur luctus erat nunc, sed ullamcorper erat vestibulum eget.</p>
-                                    </div>
-                                    <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-600 dark:text-gray-50" fdprocessedid="i7etku">Read more</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
                             <img
                                 className="relative z-10 object-cover w-full rounded-md h-96"
-                                src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                                src="https://images.unsplash.com/photo-1644018335954-ab54c83e007f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                                 alt=""
                             />
                             <div className="relative z-20 max-w-lg p-6 mx-auto -mt-20 bg-white rounded-md shadow dark:bg-gray-900">
@@ -45,19 +32,19 @@ const BrowsePlugin = () => {
                                     href="#"
                                     className="font-semibold text-gray-800 hover:underline dark:text-white md:text-xl"
                                 >
-                                    How to use sticky note for problem solving
+                                    All the features you want to know
                                 </a>
                                 <p className="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
                                     veritatis sint autem nesciunt, laudantium quia tempore delect
                                 </p>
-                                <p className="mt-3 text-sm text-blue-500">20 October 2019</p>
+                                <p className="mt-3 text-sm text-blue-500">21 October 2019</p>
                             </div>
                         </div>
-                        <div>
+                        <div  className={classes.property}>
                             <img
-                                className="relative z-10 object-cover w-full rounded-md h-96"
-                                src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                                className="relative z-10 object-cover w-full rounded-md h-96 justify-center"
+                                src="https://cdn.slidesharecdn.com/ss_thumbnails/nikppt-140322073227-phpapp01-thumbnail.jpg?width=640&height=640&fit=bounds"
                                 alt=""
                             />
                             <div className="relative z-20 max-w-lg p-6 mx-auto -mt-20 bg-white rounded-md shadow dark:bg-gray-900">
@@ -65,19 +52,18 @@ const BrowsePlugin = () => {
                                     href="#"
                                     className="font-semibold text-gray-800 hover:underline dark:text-white md:text-xl"
                                 >
-                                    How to use sticky note for problem solving
+                                    GESTURE RECOGNIZATION MODEL
                                 </a>
                                 <p className="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-                                    veritatis sint autem nesciunt, laudantium quia tempore delect
+                                    
                                 </p>
-                                <p className="mt-3 text-sm text-blue-500">20 October 2019</p>
+                                <p className="mt-3 text-sm text-blue-500">9 APRIL 2024</p>
                             </div>
                         </div>
-                        <div>
+                        <div className={classes.property}>
                             <img
                                 className="relative z-10 object-cover w-full rounded-md h-96"
-                                src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                                src="https://deeplobe.ai/wp-content/uploads/2023/03/Image-classification-1.png"
                                 alt=""
                             />
                             <div className="relative z-20 max-w-lg p-6 mx-auto -mt-20 bg-white rounded-md shadow dark:bg-gray-900">
@@ -85,19 +71,39 @@ const BrowsePlugin = () => {
                                     href="#"
                                     className="font-semibold text-gray-800 hover:underline dark:text-white md:text-xl"
                                 >
-                                    How to use sticky note for problem solving
+                                 IMAGE CLASSIFICATION MODEL
                                 </a>
                                 <p className="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-                                    veritatis sint autem nesciunt, laudantium quia tempore delect
+                                    
                                 </p>
-                                <p className="mt-3 text-sm text-blue-500">20 October 2019</p>
+                                <p className="mt-3 text-sm text-blue-500">9 APRIL 2024</p>
                             </div>
                         </div>
-                        <div>
+                        <div className={classes.property}>
+                           <div  className=" d-flex justify-content-center">
                             <img
-                                className="relative z-10 object-cover w-full rounded-md h-96"
-                                src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                                className="relative z-10 object-cover w-full rounded-md h-96  "
+                                src="https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/333042351/original/97538d92dbbc4779cf760f8d09ad87d30db21793/help-you-with-object-detection-or-classification-python.jpeg"
+                                alt=""
+                                
+                            />
+                            <div className="relative z-20 max-w-lg p-6 mx-auto -mt-20 bg-white rounded-md shadow dark:bg-gray-900">
+                                <a
+                                    href="#"
+                                    className="font-semibold text-gray-800 hover:underline dark:text-white md:text-xl"
+                                >
+                                    OBJECT DETECTION MODEL
+                                </a>
+                                <p className="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm"></p>
+                                    
+                                <p className="mt-3 text-sm text-blue-500">9 APRIL 2024</p>
+                            </div>
+                        </div>
+                        </div>
+                        <div  className= {classes.property}>
+                            <img
+                                className="relative z-10 object-cover w-full rounded-md h-96  "
+                                src="https://cdn.dribbble.com/users/7894989/screenshots/17625161/media/4a2e45c401ac919ce55ee9a8c01012ff.jpg?resize=400x300&vertical=center"
                                 alt=""
                             />
                             <div className="relative z-20 max-w-lg p-6 mx-auto -mt-20 bg-white rounded-md shadow dark:bg-gray-900">
@@ -105,13 +111,12 @@ const BrowsePlugin = () => {
                                     href="#"
                                     className="font-semibold text-gray-800 hover:underline dark:text-white md:text-xl"
                                 >
-                                    How to use sticky note for problem solving
+                                    USE SPEECH MODEL
                                 </a>
                                 <p className="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-                                    veritatis sint autem nesciunt, laudantium quia tempore delect
+                                  
                                 </p>
-                                <p className="mt-3 text-sm text-blue-500">20 October 2019</p>
+                                <p className="mt-3 text-sm text-blue-500 ">9 APRIL 2024</p>
                             </div>
                         </div>
                     </div>
