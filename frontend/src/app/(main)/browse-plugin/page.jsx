@@ -17,29 +17,28 @@ const BrowsePlugin = () => {
                     </div>
                 </div>
             </header>
-            <section className="bg-white dark:bg-gray-700">
-                <div className="container px-6 py-10 mx-auto w-auto">
+            <section className="bg-white dark:bg-gray-900">
+                <div className="container px-6 py-10 mx-auto">
 
-                    <div className="grid grid-cols-1 gap-8 mt-8 lg:grid-cols-3 w-30 backdrop-blur-md">
-                        <div className={classes.property}>
+                    <div className="grid grid-cols-1 gap-8 mt-8 lg:grid-cols-3">
+                        <div>
                             <img
-                                className="relative z-10 object-cover w-full rounded-md h-96 me-5"
-                                src="https://res.cloudinary.com/people-matters/image/upload/q_auto,f_auto/v1655341954/1655341952.jpg"
+                                className="relative z-10 object-cover w-full rounded-md h-96"
+                                src="https://images.unsplash.com/photo-1644018335954-ab54c83e007f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                                 alt=""
                             />
-                                
-                                  
                             <div className="relative z-20 max-w-lg p-6 mx-auto -mt-20 bg-white rounded-md shadow dark:bg-gray-900">
                                 <a
                                     href="#"
                                     className="font-semibold text-gray-800 hover:underline dark:text-white md:text-xl"
                                 >
-                                    TOXICITY DETECTION MODEL
+                                    All the features you want to know
                                 </a>
                                 <p className="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
-                                    
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+                                    veritatis sint autem nesciunt, laudantium quia tempore delect
                                 </p>
-                                <p className="mt-3 text-sm text-blue-500">9 APRIL 2024</p>
+                                <p className="mt-3 text-sm text-blue-500">21 October 2019</p>
                             </div>
                         </div>
                         <div  className={classes.property}>
