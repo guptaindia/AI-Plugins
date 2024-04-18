@@ -22,7 +22,7 @@ const BrowsePlugin = () => {
                 <div className="container px-6 ">
 
                     <div className="grid grid-cols-1 gap-4 mt-4 lg:grid-cols-3">
-                        <div>
+                        <div className=''>
                             <ThreeDCard title={'object detection model'} description={'browse model'} imageUrl={'/cardImg2.jpg'}/>
                         </div>
                         <div  className=''>
@@ -35,7 +35,7 @@ const BrowsePlugin = () => {
                         <ThreeDCard title={'Toxicity detection'} description={'browse model'} imageUrl={'/cardImg5.jpg'}/>
                         </div>
 
-                        <div>
+                        <div className=''>
                         <ThreeDCard title={'Speech model'} description={'browse model'} imageUrl={'/cardImg6.jpg'}/>
                          </div>
                     </div>
