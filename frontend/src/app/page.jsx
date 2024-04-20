@@ -5,7 +5,7 @@ import Wavyground from './wavy-background';
 const Home = () => {
   return (
     <div>
-      <Wavyground title={'Brainy Bolts'} description={'Leverage the power of canvas to create a beautiful hero section'}/>
+      <Wavyground title={'Brainy Bolts'} description={'We leverage the power of webite you create a beautiful website'}/>
     </div>
   )
 }
