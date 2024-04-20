@@ -9,7 +9,7 @@ export const AppProvider = ({children}) => {
     
     const [currentUser, setCurrentUser] = useState(JSON.parse(
         sessionStorage.getItem('user')
-    ));
+    )); 
 
     const axiosInstance = axios.create({
         baseURL: process.env.NEXT_PUBLIC_API_URL,

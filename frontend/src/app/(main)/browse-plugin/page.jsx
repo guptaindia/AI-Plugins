@@ -1,11 +1,14 @@
 import React from 'react'
 import classes from './browse.module.css';
 import ThreeDCard from './3dCard';
+import BackgroundBoxes from './backgroundbox';
 
 const BrowsePlugin = () => {
     return (
+        
         <div>
-            <header className={classes.bg}>
+            <BackgroundBoxes title={'Welcome to the  browsing-plugin page'} description={'browse models'}/>
+            {/* <header className={classes.bg}>
                 <div className="flex items-center justify-center text-center h-full backdrop-blur-md">
                     <div className='' >
 
@@ -17,7 +20,7 @@ const BrowsePlugin = () => {
                         </p>
                     </div>
                 </div>
-            </header>
+            </header> */}
             <section className="">
                 <div className="container px-6 ">
 

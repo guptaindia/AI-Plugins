@@ -3,11 +3,14 @@ import React from 'react'
 // import { CopyBlock } from 'react-code-blocks';
 import { CodeBlock, dracula } from 'react-code-blocks';
 import classes from './plugin.module.css';
+import BackgroundBoxes from './backgroundbox';
 
 const pluginDetails = () => {
   return (
     <div>
-      <header className={classes.bg}>
+        <BackgroundBoxes title={' Revolutionary way to build the web'} description={'This is a section of some simple filler text, also known as placeholdertext. It shares some characteristics of a real written text but is random or otherwise generated.'}/>
+
+      {/* <header className=''>
         <div className="bg-gray-100  sm:py-8 lg:p-4">
           <div className="mx-auto max-w-screen-2x1 px-4 md:px-8 ">
             <div className="bg-gradient-to-l hover:bg-gradient-to-r rounded-lg bg-gray-100 px-4 py-6 md:py-8 lg:py-12 bg-gradient-to-r from-purple-500 to-pink-500">
@@ -27,7 +30,7 @@ const pluginDetails = () => {
           </div>
         </div>
 
-      </header>
+      </header> */}
       <div className="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
         <div className="grid gap-5 row-gap-10 lg:grid-cols-2">
           <div className={`flex flex-col justify-start ${classes.detailColumn} pt-12`}>

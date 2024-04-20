@@ -29,12 +29,7 @@ const Login = () => {
       })
       .then((response) => {
            console.log(response.status);
-           return response.json();
-          
-
-      })
-      .then(data => {
-        console.log(data);
+           console.log(response.data)
       })
       .catch((err) => {
           console.log(err);
