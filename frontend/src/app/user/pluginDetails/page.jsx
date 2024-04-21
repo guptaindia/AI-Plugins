@@ -4,6 +4,7 @@ import React from 'react'
 import { CodeBlock, dracula } from 'react-code-blocks';
 import classes from './plugin.module.css';
 import BackgroundBoxes from './backgroundbox';
+import Navbar from '@/app/(main)/navbar';
 
 const pluginDetails = () => {
   return (
