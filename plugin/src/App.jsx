@@ -1,10 +1,11 @@
 import React from 'react'
-import ToxicityDetection from './toxicityDetection'
+//import ToxicityDetection from './toxicityDetection'
+import ObjDetect from './objectDetection'
 
 const App = () => {
   return (
     <div>
-      <ToxicityDetection />
+      <ObjDetect />
     </div>
   )
 }

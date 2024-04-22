@@ -1,69 +1,92 @@
-import './App.css';
-import * as ml5 from "ml5";
+// Import dependencies
+import React, { useRef, useEffect } from "react";
+//import * as tf from "@tensorflow/tfjs";
+import * as cocossd from "@tensorflow-models/coco-ssd";
 import Webcam from "react-webcam";
-import {useEffect, useRef} from "react";
-const dimensions = {
-  width: 800,
-  height: 500
-}
-function App() {
-  const webcamRef = useRef();
-  const canvasRef = useRef();
-  const { width, height } = dimensions;
+//import "./App.css";
+import { drawRect } from "./utils";
 
-  useEffect(() => {
-    let detectionInterval;
+function ObjDetect() {
+  const webcamRef = useRef(null);
+  const canvasRef = useRef(null);
 
-    const modelLoaded = () => {
-      webcamRef.current.video.width = width;
-      webcamRef.current.video.height = height;
-      canvasRef.current.width = width;
-      canvasRef.current.height = height;
+  // Main function
+  const runCoco = async () => {
+    const net = await cocossd.load();
+    console.log("Handpose model loaded.");
+    //  Loop and detect hands
+    setInterval(() => {
+      detect(net);
+    }, 10);
+  };
 
+  const detect = async (net) => {
+    // Check data is available
+    if (
+      typeof webcamRef.current !== "undefined" &&
+      webcamRef.current !== null &&
+      webcamRef.current.video.readyState === 4
+    ) {
+      // Get Video Properties
+      const video = webcamRef.current.video;
+      const videoWidth = webcamRef.current.video.videoWidth;
+      const videoHeight = webcamRef.current.video.videoHeight;
 
-      detectionInterval = setInterval(() => {
-        detect();
-      }, 200);
-    };
+      // Set video width
+      webcamRef.current.video.width = videoWidth;
+      webcamRef.current.video.height = videoHeight;
 
-    const objectDetector = ml5.objectDetector('cocossd', modelLoaded);
+      // Set canvas height and width
+      canvasRef.current.width = videoWidth;
+      canvasRef.current.height = videoHeight;
 
-    const detect = () => {
-      if (webcamRef.current.video.readyState !== 4) {
-        console.warn('Video not ready yet');
-        return;
-      }
+      // Make Detections
+      const obj = await net.detect(video);
 
-      objectDetector.detect(webcamRef.current.video, (err, results) => {
-        const ctx = canvasRef.current.getContext('2d');
-        ctx.clearRect(0, 0, width, height);
-        if (results && results.length) {
-          results.forEach((detection) => {
-            ctx.beginPath();
-            ctx.fillStyle = "#FF0000";
-            const { label, x, y, width, height } = detection;
-            ctx.fillText(label, x, y - 5);
-            ctx.rect(x, y, width, height);
-            ctx.stroke();
-          });
-        }
-      });
-    };
-
-    return () => {
-      if (detectionInterval) {
-        clearInterval(detectionInterval);
-      }
+      // Draw mesh
+      const ctx = canvasRef.current.getContext("2d");
+      drawRect(obj, ctx); 
     }
+  };
 
-  }, [width, height]);
+  useEffect(()=>{runCoco()},[]);
 
   return (
-      <div>
-        <Webcam ref={webcamRef} className="webcam"/>
-        <canvas ref={canvasRef} className="canvas"/>
-      </div>
+    <div className="App">
+      <header className="App-header">
+        <Webcam
+          ref={webcamRef}
+          muted={true} 
+          style={{
+            position: "absolute",
+            marginLeft: "auto",
+            marginRight: "auto",
+            left: 0,
+            right: 0,
+            textAlign: "center",
+            zindex: 9,
+            width: 640,
+            height: 480,
+          }}
+        />
+
+        <canvas
+          ref={canvasRef}
+          style={{
+            position: "absolute",
+            marginLeft: "auto",
+            marginRight: "auto",
+            left: 0,
+            right: 0,
+            textAlign: "center",
+            zindex: 8,
+            width: 640,
+            height: 480,
+          }}
+        />
+      </header>
+    </div>
   );
 }
 
-export default App;
+export default ObjDetect;

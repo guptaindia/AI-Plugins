@@ -2,7 +2,7 @@
 // import GestureRecognition from './GestureRecognition'
 import React, { useRef, useState } from "react";
 // import * as tf from "@tensorflow/tfjs";
-import * as handpose from "@tensorflow-models/handpose";
+//import * as handpose from "@tensorflow-models/handpose"; install this model
 import Webcam from "react-webcam";
 // import './App.css';
 import { drawHand } from "./utils";

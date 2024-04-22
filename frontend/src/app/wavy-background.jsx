@@ -1,10 +1,13 @@
 "use client"
 import React from "react";
 import { WavyBackground } from "@/components/ui/wavy-background";
+import Navbar from "./(main)/navbar";
 
 export default function Wavyground({title, description}) {
   return (
-    <WavyBackground className="max-w-4xl mx-auto pb-80">
+    <div>
+      
+    <WavyBackground className="max-w-4xl mx-auto pb-80 ">
       <p className="text-2xl md:text-4xl lg:text-5xl text-white font-bold inter-var text-center">
         {title}
       </p>
@@ -12,5 +15,6 @@ export default function Wavyground({title, description}) {
         {description}
       </p>
     </WavyBackground>
+    </div>
   );
 }
