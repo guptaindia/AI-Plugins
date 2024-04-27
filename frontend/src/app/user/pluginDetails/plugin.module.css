@@ -1,0 +1,12 @@
+.bg{
+    background-image: url('https://images7.alphacoders.com/133/1337527.png');
+    background-size: cover;
+    background-position: center;
+    height: 38vh;
+    margin-bottom: 2vh;
+}
+
+.detailColumn{
+    height: 60vh;
+    overflow: auto;
+}
