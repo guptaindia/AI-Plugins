@@ -5,12 +5,14 @@ import App from './App.jsx'
 import './index.css'
 import GestureRecognitionPlugin from './GestureRecognition.jsx';
 import Dictaphone1 from './speechRecognition.jsx';
+import { ObjectDetection } from '@tensorflow-models/coco-ssd';
+import ObjDetect from './objectDetection.jsx';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+// ReactDOM.createRoot(document.getElementById('root')).render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>,
+// )
 
 
 // let gestureEle = document.getElementById('gesture-recognition-plugin');
@@ -22,3 +24,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 // if (voiceEle) {
 //   ReactDOM.createRoot(voiceEle).render(<Dictaphone1 />)
 // }
+
+let objectdetect = document.getElementById('object-detection-plugin');
+if (objectdetect) {
+  ReactDOM.createRoot(objectdetect).render(<ObjDetect/>)
+}
