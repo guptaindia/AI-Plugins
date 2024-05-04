@@ -38,7 +38,7 @@ const Navbar = () => {
           <ul class="flex items-center hidden space-x-8 lg:flex">
             <li>
               <a
-                href="/"
+                href="/browse-plugin"
                 aria-label="Our product"
                 title="Our product"
                 class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"

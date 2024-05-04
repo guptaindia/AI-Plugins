@@ -1,45 +1,37 @@
 import React from 'react'
-import classes from './browse.module.css';
+
 import ThreeDCard from './3dCard';
 import BackgroundBoxes from './backgroundbox';
+import { useRouter } from 'next/navigation';
 
 const BrowsePlugin = () => {
+
+    
+
     return (
         
         <div>
             <BackgroundBoxes title={'Welcome to the  browsing-plugin page'} description={'browse models'}/>
-            {/* <header className={classes.bg}>
-                <div className="flex items-center justify-center text-center h-full backdrop-blur-md">
-                    <div className='' >
-
-                        <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">
-                            WELCOME TO AI PLUGIT
-                        </h1>
-                        <p className="max-w-lg mx-auto mt-4 text-white">
-                            CHOOSE  THE  MODEL  GIVEN  BELOW
-                        </p>
-                    </div>
-                </div>
-            </header> */}
+      
             <section className="">
                 <div className="container px-6 ">
 
                     <div className="grid grid-cols-1 gap-4 mt-4 lg:grid-cols-3">
                         <div className=''>
-                            <ThreeDCard title={'object detection model'} description={'browse model'} imageUrl={'/cardImg2.jpg'}/>
+                            <ThreeDCard title={'object detection model'} description={'browse model'} imageUrl={'/cardImg2.jpg'} link={'/user/pluginDetails/object-detection'} />
                         </div>
                         <div  className=''>
-                            <ThreeDCard title={'Gesture recognition'} description={'browse model'} imageUrl={'/cardImg3.jpg'}/>
+                            <ThreeDCard title={'Gesture recognition'} description={'browse model'} imageUrl={'/cardImg3.jpg'} link={'/user/pluginDetails/gesture-recognition'}/>
                         </div>
                         <div className=''>
-                            <ThreeDCard title={'Image calssification'} description={'browse model'} imageUrl={'/cardImg4.jpg'}/>
+                            <ThreeDCard title={'Image calssification'} description={'browse model'} imageUrl={'/cardImg4.jpg'} link={'/user/pluginDetails/image-classification'}/>
                         </div>
                         <div className=''>
-                        <ThreeDCard title={'Toxicity detection'} description={'browse model'} imageUrl={'/cardImg5.jpg'}/>
+                        <ThreeDCard title={'Toxicity detection'} description={'browse model'} imageUrl={'/cardImg5.jpg'} link={'/user/pluginDetails/toxicity-detection'}/>
                         </div>
 
                         <div className=''>
-                        <ThreeDCard title={'Speech model'} description={'browse model'} imageUrl={'/cardImg6.jpg'}/>
+                        <ThreeDCard title={'Speech model'} description={'browse model'} imageUrl={'/cardImg6.jpg'} link={'/user/pluginDetails/speech-model'}/>
                          </div>
                     </div>
                 </div>

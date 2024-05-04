@@ -2,9 +2,11 @@
 
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3dCard";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 export default function ThreeDCard({title, description, imageUrl, link}) {
+  const router = useRouter();
   return (
     <CardContainer className="inter-var">
       <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
@@ -37,6 +39,9 @@ export default function ThreeDCard({title, description, imageUrl, link}) {
         </CardItem>
         <div className="flex justify-between items-center mt-20">
           <CardItem
+          onClick={() => {
+            router.push(link)
+          }}
             translateZ={20}
             // translateX={-40}
             as="button"
