@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div className=''>
       <Navbar/>
-      <div className='relative'>
+      <div className='relative bg-[#111727]'>
 
       </div>
       <Wavyground title={'Rapidly use modern AI model without ever leaving your code.'} description={'A javascript framework packed with models like gesture, semantic, speech and object detection that can be composed to build on your code, directly on website.'}/>

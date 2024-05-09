@@ -7,6 +7,7 @@ import GestureRecognitionPlugin from './GestureRecognition.jsx';
 import Dictaphone1 from './speechRecognition.jsx';
 import { ObjectDetection } from '@tensorflow-models/coco-ssd';
 import ObjDetect from './objectDetection.jsx';
+import ToxicityDetection from './toxicityDetection.jsx';
 
 // ReactDOM.createRoot(document.getElementById('root')).render(
 //   <React.StrictMode>
@@ -15,17 +16,22 @@ import ObjDetect from './objectDetection.jsx';
 // )
 
 
-// let gestureEle = document.getElementById('gesture-recognition-plugin');
-// if (gestureEle) {
-//   ReactDOM.createRoot(gestureEle).render(<GestureRecognitionPlugin />)
-// }
+let gestureEle = document.getElementById('gesture-recognition-plugin');
+if (gestureEle) {
+  ReactDOM.createRoot(gestureEle).render(<GestureRecognitionPlugin />)
+}
 
-// let voiceEle = document.getElementById('voice-recognition');
-// if (voiceEle) {
-//   ReactDOM.createRoot(voiceEle).render(<Dictaphone1 />)
-// }
+let voiceEle = document.getElementById('voice-recognition');
+if (voiceEle) {
+  ReactDOM.createRoot(voiceEle).render(<Dictaphone1 />)
+}
 
 let objectdetect = document.getElementById('object-detection-plugin');
 if (objectdetect) {
   ReactDOM.createRoot(objectdetect).render(<ObjDetect/>)
+}
+
+let toxicityDetect = document.getElementById('toxicity-detection-plugin');
+if (toxicityDetect) {
+  ReactDOM.createRoot(toxicityDetect).render(<ToxicityDetection/>)
 }

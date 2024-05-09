@@ -24,11 +24,11 @@ export default function ToxicityDetection() {
   const predictions = useTextToxicity(value)
 
   return (
-    <div style={{ display: 'flex' }}>
+    <div className='border-2 border-gray-600'>
       <div>
         <div>Write something</div>
         <textarea
-          style={{ width: 300, height: 200 }}
+          style={{ width:100  , height:300}}
           value={value}
           onChange={(e) => setValue(e.target.value)}
         />
