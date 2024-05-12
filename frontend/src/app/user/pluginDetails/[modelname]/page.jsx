@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { CodeBlock, dracula } from 'react-code-blocks';
+import { CodeBlock, CopyBlock, dracula } from 'react-code-blocks';
 import classes from '../plugin.module.css';
 import BackgroundBoxes from '../backgroundbox';
 import Navbar from '@/app/(main)/navbar';
@@ -22,7 +22,8 @@ const pluginContent = {
   'gesture-recognition': {
     title: "Gesture Recognition",
     image: '/cardImg3.jpg',
-    code: ``,
+    code: `<div id="gesture-recognition-plugin"></div>
+<script type="module" src="http://localhost:5000/main.js"></script>`,
     description: 'Gesture recognition is the process of understanding human gestures through computational algorithms, typically using computer vision or machine learning techniques. It involves interpreting movements of the body, hands, fingers, or face to recognize specific gestures that convey meaning or commands',
     features: [
       'Gesture Mapping to Actions',
@@ -47,7 +48,14 @@ const pluginContent = {
   'toxicity-detection': {
     title: "toxicity-detection",
     image: '/cardImg5.jpg',
-    code: ``,
+    code: `<div id="toxicity-plugin">
+    <input type="text" id="text-input">
+    <button id="trigger">Make Prediction</button>
+    <p id="output"></p>
+  </div>
+  <script type="module" src="http://localhost:5000/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/toxicity"></script>`,
     description: 'Toxicity detection, also known as toxic comment classification, is the task of identifying and flagging inappropriate, offensive, or harmful content within text data. This is particularly relevant in online platforms where user-generated content can include abusive language, hate speech, harassment, or other forms of harmful communication. The goal of toxicity detection is to automatically classify text inputs into categories like "toxic" or "non-toxic" based on their content.',
     features: [
       'Text Input Interface:',
@@ -67,7 +75,8 @@ const pluginContent = {
       'Natural Language Understanding',
       'Noise and Environment Adaptation',
       'Real-time Processing',
-    ]},
+    ]
+  },
 }
 
 const pluginDetails = () => {
@@ -76,9 +85,9 @@ const pluginDetails = () => {
 
   return (
     <div>
-      <BackgroundBoxes  title={pluginContent[modelname].title} description={pluginContent[modelname].description} />
+      <BackgroundBoxes title={pluginContent[modelname].title} description={pluginContent[modelname].description} />
 
-   
+
       <div className="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
         <div className="grid gap-5 row-gap-10 lg:grid-cols-2">
           <div className={`flex flex-col justify-start ${classes.detailColumn} pt-12`}>
@@ -87,7 +96,7 @@ const pluginDetails = () => {
                 {pluginContent[modelname].title}
               </h2>
               <p className="text-base text-gray-700 md:text-lg">
-                
+
               </p>
             </div>
             <p className="mb-4 text-sm font-bold tracking-widest uppercase">
@@ -124,14 +133,12 @@ const pluginDetails = () => {
             </div>
           </div>
           <div className={classes.detailColumn}>
-            <CodeBlock
+            <CopyBlock
               customStyle={{
-                height: '60vh'
+                height: '60vh',
+                width: '120vh'
               }}
-              text={
-                `<div id="object-detection-plugin"></div>
-                <script src="main.js"></script>`
-              }
+              text={pluginContent[modelname].code}
               language={'html'}
               showLineNumbers={true}
               theme={dracula}

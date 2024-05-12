@@ -7,7 +7,7 @@ import GestureRecognitionPlugin from './GestureRecognition.jsx';
 import Dictaphone1 from './speechRecognition.jsx';
 import { ObjectDetection } from '@tensorflow-models/coco-ssd';
 import ObjDetect from './objectDetection.jsx';
-import ToxicityDetection from './toxicityDetection.jsx';
+import ToxicityPlugin from './toxicityDetection.jsx';
 
 // ReactDOM.createRoot(document.getElementById('root')).render(
 //   <React.StrictMode>
@@ -31,7 +31,23 @@ if (objectdetect) {
   ReactDOM.createRoot(objectdetect).render(<ObjDetect/>)
 }
 
-let toxicityDetect = document.getElementById('toxicity-detection-plugin');
-if (toxicityDetect) {
-  ReactDOM.createRoot(toxicityDetect).render(<ToxicityDetection/>)
+const toxicityElement = document.getElementById('toxicity-plugin');
+
+if (toxicityElement) {
+
+  let inputElement = document.getElementById('text-input');
+  let buttonElement = document.getElementById('trigger');
+  let outputElement = document.getElementById('output');
+
+  let innerHTML = { __html: toxicityElement.innerHTML };
+
+  ReactDOM.createRoot(toxicityElement).render(
+    <ToxicityPlugin
+      inputElement={inputElement}
+      buttonElement={buttonElement}
+      outputElement={outputElement}
+    >
+      <div dangerouslySetInnerHTML={innerHTML} />
+    </ToxicityPlugin>
+  );
 }

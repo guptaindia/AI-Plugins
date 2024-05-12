@@ -1,39 +1,68 @@
-import React, { Fragment, useState } from 'react'
-import useTextToxicity from 'react-text-toxicity'
+import React, { useEffect, useState } from 'react'
+// import * as toxicity from '@tensorflow-models/toxicity';
 
-function Toxicity({ predictions }) {
-  const style = { margin: 10 }
 
-  if (!predictions) return <div style={style}>Loading predictions...</div>
+const ToxicityPlugin = ({
+  children
+}) => {
+
+  // const [model, setModel] = useState(null);
+  let model;
+  // const [text, setText] = useState('');
+  const [predictions, setPredictions] = useState(null)
+  let outputElement = document.getElementById('output');
+  
+  useEffect(() => {
+    let buttonElement = document.getElementById('trigger');
+    buttonElement.disabled = true;
+    buttonElement.addEventListener('click', () => predict());
+    async function loadModel() {
+      model = await window.toxicity.load();
+      buttonElement.disabled = false;
+      console.log('model loaded');
+      // setModel(temp);
+    }
+    loadModel();
+  }, []);
+  
+  async function predict() {
+    let inputElement = document.getElementById('text-input');
+    console.log('predicting...');
+    console.log(inputElement.value);
+    const predictions = await model.classify(inputElement.value);
+    console.log(predictions);
+    setPredictions(predictions);
+    if (predictions[6].results[0].match) {
+      outputElement.innerHTML = "Toxicity detected";
+    }
+  }
+
+  const displayPredictions = () => {
+    if (predictions !== null) {
+      return predictions.map((prediction) => (
+        <div key={prediction.label}>{prediction.label}: {prediction.results[0].match ? 'Yes' : 'No'}</div>
+      ));
+    }
+  }
+
 
   return (
-    <div style={style}>
-      {predictions.map(({ label, match, probability }) => (
-        <div style={{ margin: 5 }} key={label}>
-          {`${label} - ${probability} - ${match ? '🤢' : '🥰'}`}
+    <div>
+      {children}
+      {displayPredictions()}
+
+      {/* <div className='card'>
+        <div className="card-body">
+          <button onClick={() => predict()}>Predict</button>
+          <div>
+            {predictions !== null && predictions.map((prediction) => (
+              <div key={prediction.label}>{prediction.label}: {prediction.results[0].match ? 'Yes' : 'No'}</div>
+            ))}
+          </div>
         </div>
-      ))}
+      </div> */}
     </div>
   )
 }
 
-export default function ToxicityDetection() {
-  const [value, setValue] = useState('')
-
-  // predictions are updated every time the value is updated
-  const predictions = useTextToxicity(value)
-
-  return (
-    <div className='border-2 border-gray-600'>
-      <div>
-        <div>Write something</div>
-        <textarea
-          style={{ width:100  , height:300}}
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
-        />
-      </div>
-      {value && <Toxicity predictions={predictions} />}
-    </div>
-  )
-}
+export default ToxicityPlugin
