@@ -48,7 +48,7 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="/"
+                href="#features"
                 aria-label="Our product"
                 title="Our product"
                 class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"

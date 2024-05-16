@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { CodeBlock, dracula } from 'react-code-blocks';
+import { CodeBlock, CopyBlock, dracula } from 'react-code-blocks';
 import classes from '../plugin.module.css';
 import BackgroundBoxes from '../backgroundbox';
 import Navbar from '@/app/(main)/navbar';
@@ -22,56 +22,61 @@ const pluginContent = {
   'gesture-recognition': {
     title: "Gesture Recognition",
     image: '/cardImg3.jpg',
-    code: ``,
-
+    code: `<div id="gesture-recognition-plugin"></div>
+<script type="module" src="http://localhost:5000/main.js"></script>`,
     description: 'Gesture recognition is the process of understanding human gestures through computational algorithms, typically using computer vision or machine learning techniques. It involves interpreting movements of the body, hands, fingers, or face to recognize specific gestures that convey meaning or commands',
     features: [
-      'Real-Time Object Detection',
-      'Bounding Box Visualization',
-      'Cross-Browser Compatibility',
-      'Multiple Object Recognition',
+      'Gesture Mapping to Actions',
+      'Camera Integration',
+      'Range of Supported Gestures',
+      'Real-time Feedback',
     ]
   },
   'image-classification': {
-    title: "Object Detection",
+    title: "image-classification",
     image: '/cardImg4.jpg',
     code: ``,
-
     description: 'Image classification is a fundamental task in computer vision that involves categorizing an input image into one of several predefined classes or categories. The goal is to teach a machine learning model to recognize and differentiate between different objects or scenes based solely on the visual content of the image',
     features: [
-      'Real-Time Object Detection',
-      'Bounding Box Visualization',
-      'Cross-Browser Compatibility',
-      'Multiple Object Recognition',
+      'clasiification',
+      'clasiification',
+      'Cclasiification',
+      'clasiification',
     ]
   },
 
   'toxicity-detection': {
-    title: "Object Detection",
+    title: "toxicity-detection",
     image: '/cardImg5.jpg',
-    code: ``,
-
+    code: `<div id="toxicity-plugin">
+    <input type="text" id="text-input">
+    <button id="trigger">Make Prediction</button>
+    <p id="output"></p>
+  </div>
+  <script type="module" src="http://localhost:5000/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/toxicity"></script>`,
     description: 'Toxicity detection, also known as toxic comment classification, is the task of identifying and flagging inappropriate, offensive, or harmful content within text data. This is particularly relevant in online platforms where user-generated content can include abusive language, hate speech, harassment, or other forms of harmful communication. The goal of toxicity detection is to automatically classify text inputs into categories like "toxic" or "non-toxic" based on their content.',
     features: [
-      'Real-Time Object Detection',
-      'Bounding Box Visualization',
-      'Cross-Browser Compatibility',
-      'Multiple Object Recognition',
+      'Text Input Interface:',
+      'Toxicity Classification',
+      'Probability Scores',
+      'Real-time Analysis',
     ]
   },
 
   'speech-model': {
-    title: "Object Detection",
+    title: "speech-model",
     image: '/cardImg6.jpg',
     code: ``,
-
     description: 'A speech model, in the context of artificial intelligence and machine learning, refers to a system designed to process and understand spoken language. This encompasses various tasks related to speech recognition, speech synthesis, and natural language processing (NLP).',
     features: [
-      'Real-Time Object Detection',
-      'Bounding Box Visualization',
-      'Cross-Browser Compatibility',
-      'Multiple Object Recognition',
-    ]},
+      'Real-time Speech-to-Text Conversion',
+      'Natural Language Understanding',
+      'Noise and Environment Adaptation',
+      'Real-time Processing',
+    ]
+  },
 }
 
 const pluginDetails = () => {
@@ -80,29 +85,9 @@ const pluginDetails = () => {
 
   return (
     <div>
-      <BackgroundBoxes headerImg={pluginContent[modelname].image} title={pluginContent[modelname].title} description={pluginContent[modelname].description} />
+      <BackgroundBoxes title={pluginContent[modelname].title} description={pluginContent[modelname].description} />
 
-      {/* <header className=''>
-        <div className="bg-gray-100  sm:py-8 lg:p-4">
-          <div className="mx-auto max-w-screen-2x1 px-4 md:px-8 ">
-            <div className="bg-gradient-to-l hover:bg-gradient-to-r rounded-lg bg-gray-100 px-4 py-6 md:py-8 lg:py-12 bg-gradient-to-r from-purple-500 to-pink-500">
-              <p className="mb-2 text-center font-semibold text-indigo-500 md:mb-3 lg:text-lg">
-                Introducing
-              </p>
-              <h2 className="mb-4 text-center text-2xl font-bold text-white md:mb-6 lg:text-3xl">
-                Revolutionary way to build the web
-              </h2>
-              <p className="mx-auto max-w-screen-md text-center text-gray-600 md:text-lg">
-                This is a section of some simple filler text, also known as placeholder
-                text. It shares some characteristics of a real written text but is
-                random or otherwise generated.
 
-              </p>
-            </div>
-          </div>
-        </div>
-
-      </header> */}
       <div className="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
         <div className="grid gap-5 row-gap-10 lg:grid-cols-2">
           <div className={`flex flex-col justify-start ${classes.detailColumn} pt-12`}>
@@ -111,7 +96,7 @@ const pluginDetails = () => {
                 {pluginContent[modelname].title}
               </h2>
               <p className="text-base text-gray-700 md:text-lg">
-                
+
               </p>
             </div>
             <p className="mb-4 text-sm font-bold tracking-widest uppercase">
@@ -148,16 +133,12 @@ const pluginDetails = () => {
             </div>
           </div>
           <div className={classes.detailColumn}>
-            <CodeBlock
+            <CopyBlock
               customStyle={{
-                height: '60vh'
+                height: '60vh',
+                width: '120vh'
               }}
-              text={
-                `<div>
-    <h1>Something </h1>
-    <h1>Something else</h1>
-</div>`
-              }
+              text={pluginContent[modelname].code}
               language={'html'}
               showLineNumbers={true}
               theme={dracula}

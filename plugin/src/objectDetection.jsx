@@ -8,7 +8,7 @@ import Webcam from "react-webcam";
 
 import { drawRect } from "./utils";
 
-function ObjDetect() {
+function ObjDetect({width=640, height=480}) {
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
 
@@ -59,16 +59,12 @@ function ObjDetect() {
         <Webcam
           ref={webcamRef}
           muted={true} 
+          mirrored={true}
           style={{
             position: "absolute",
-            marginLeft: "auto",
-            marginRight: "auto",
-            left: 0,
-            right: 0,
-            textAlign: "center",
             zindex: 9,
-            width: 640,
-            height: 480,
+            width: width,
+            height: height,
           }}
         />
 
@@ -76,14 +72,10 @@ function ObjDetect() {
           ref={canvasRef}
           style={{
             position: "absolute",
-            marginLeft: "auto",
-            marginRight: "auto",
-            left: 0,
-            right: 0,
             textAlign: "center",
             zindex: 8,
-            width: 640,
-            height: 480,
+            width: width,
+            height: height,
           }}
         />
       </header>

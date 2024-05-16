@@ -1,16 +1,59 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <!-- <div id="root"></div> -->
-    <!-- <div id="gesture-recognition-plugin"></div>
-    <div id="voice-recognition"></div> -->
-    <div id="object-detection-plugin"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite + React</title>
+
+  <style>
+    .mysection {
+      height: 100vh;
+      padding-top: 10%;
+    }
+
+    * {
+      scroll-behavior: smooth;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- <div id="root"></div> -->
+  <!-- <div id="object-detection-plugin"></div> -->
+  <!-- <div id="gesture-recognition-plugin"></div> -->
+  <div id="voice-recognition"></div>
+  <!-- <div id="toxicity-plugin">
+    <input type="text" id="text-input">
+    <button id="trigger">Make Prediction</button>
+    <p id="output"></p>
+  </div> -->
+  <div class="mysection">
+    <h1 class="">Section content</h1>
+  </div>
+  <div class="mysection">
+    <h1>Section content</h1>
+  </div>
+  <div class="mysection">
+    <h1>Section content</h1>
+  </div>
+  <div class="mysection">
+    <h1>Section content</h1>
+  </div>
+  <div class="mysection">
+    <h1>Section content</h1>
+  </div>
+  <div class="mysection">
+    <a href="/testpage1.html">
+      <button class="rounded-full border-4 p-2"> next page </button>
+    </a>
+  </div>
+ 
+  <script type="module" src="/src/main.jsx"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/toxicity"></script>
+</body>
+
 </html>

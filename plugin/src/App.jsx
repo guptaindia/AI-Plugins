@@ -6,7 +6,7 @@ import Dictaphone1 from './speechRecognition'
 const App = () => {
   return (
     <div>
-      <ObjDetect />
+      {/* <ObjDetect /> */}
       {/* <Dictaphone1/> */}
     </div>
   )
