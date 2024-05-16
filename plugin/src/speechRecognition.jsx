@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import { AnimatePresence, motion } from 'framer-motion';
-import { IconMicrophone, IconRestore, IconPlayerPause} from '@tabler/icons-react';
+import { IconMicrophone,IconPlayerStopFilled, IconPlayerPause, IconPlayerRecordFilled } from '@tabler/icons-react';
 
 
 
@@ -46,7 +46,7 @@ const Dictaphone1 = () => {
     centered: true
   })
 
-  const triggerModal = (title, description, centered=true, icon = <IconMicrophone size={50} />) => {
+  const triggerModal = (title, description, centered = true, icon = <IconMicrophone size={50} />) => {
     setModalOptions({
       icon,
       title,
@@ -82,20 +82,19 @@ const Dictaphone1 = () => {
     if (finalTranscript.includes('scroll down')) {
       window.scrollBy(0, window.innerHeight / 2);
       triggerModal('Move Down', 'page moving down');
-    }  if (finalTranscript.includes('scroll up')) {
+    } if (finalTranscript.includes('scroll up')) {
       window.scrollBy(0, -window.innerHeight / 2)
       triggerModal('Moving up', 'page moving up');
-    } if (finalTranscript.includes('forward')){
-      window.location.href='/'
-
-      triggerModal('page moving forward','forward')
+    } if (finalTranscript.includes('forward')) {
+      history.forward()
+      triggerModal('page moving forward', 'forward')
     }
-    if(finalTranscript.includes('backward')){
-
+    if (finalTranscript.includes('previous page')) {
+      history.back()
       triggerModal('page moving background', 'back')
     }
-    if(finalTranscript.includes('zoom in')){
-
+    if (finalTranscript.includes('zoom in')) {
+      // document.body.style.zoom =  
       triggerModal('zooming in', 'zoom')
     }
   }, [finalTranscript]);
@@ -124,28 +123,25 @@ const Dictaphone1 = () => {
   };
 
   return (
-    <div className='fixed z-10 bg-gray-300 border-2 border-gray-900 rounded-lg'>
-      <div >
-        <span>
-          listening:
-          {' '}
-          {listening ? 'on' : 'off'}
-        </span>
-        <div>
-          <button className='border-2 rounded ml-1 border-gray-900' type="button" onClick={resetTranscript}><IconRestore/> </button>
-          <button className='border-2 rounded mx-1 border-gray-900' type="button" onClick={listenContinuously}><IconMicrophone/></button>
-          <button className='border-2 rounded mr-1 border-gray-900' type="button" onClick={SpeechRecognition.stopListening}><IconPlayerPause/></button>
+    <>
+      <div className='fixed z-10 bg-black text-white border-2 border-gray-900 rounded-lg px-5 py-2'>
+        <div className='flex'>
+          {listening ? <IconPlayerRecordFilled onClick={() => { SpeechRecognition.stopListening() }} color='red' /> : <IconPlayerStopFilled color='red'/>}
+          <div>
+            <button className='pl-2 pr-2' type="button" onClick={listenContinuously}><IconMicrophone /></button>
+            <button className='pr-2' type="button" onClick={SpeechRecognition.stopListening}><IconPlayerPause /></button>
+          </div>
+
         </div>
 
+        <InfoModal {...modalOptions} showModal={showModal} setShowModal={setShowModal} />
+
+
       </div>
-
-      <InfoModal {...modalOptions} showModal={showModal} setShowModal={setShowModal} />
-
-      <div>
-        <span>{transcript}</span>
+      <div className='fixed z-10 bottom-3 bg-slate-700 text-white p-2'>
+        {transcript}
       </div>
-
-    </div>
+    </>
   );
 };
 
