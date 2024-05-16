@@ -47,7 +47,7 @@ router.get('/getbyemail/:email',(req,res) => {
     .then((result) => {
 
         if(result) res.status(200).json(result);
-        else res.status(404).json({
+        else res.status(400).json({
             message : 'not found'
         })
         
