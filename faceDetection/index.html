@@ -8,7 +8,11 @@
   </head>
   <body>
     <div id="face-detection-plugin"></div>
-    <!-- <div id="face-detection-plugin"></div> -->
+    <script>
+      const callBack = (value) => {
+        console.log(value);
+      }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
     <script type="module" src="/dist/main.js"></script>
   </body>

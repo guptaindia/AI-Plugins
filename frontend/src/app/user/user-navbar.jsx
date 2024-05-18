@@ -85,7 +85,7 @@ const UserNavbar = () => {
                 aria-label="Sign up"
                 title="Sign up"
               >
-                Sign up
+                User
               </a>
             </li>
           </ul>
