@@ -23,7 +23,8 @@ if (gestureEle) {
 
 let voiceEle = document.getElementById('voice-recognition');
 if (voiceEle) {
-  ReactDOM.createRoot(voiceEle).render(<Dictaphone1 />)
+  const innerContent = voiceEle.innerHTML;
+  ReactDOM.createRoot(voiceEle).render(<Dictaphone1 content={innerContent} />)
 }
 
 let objectdetect = document.getElementById('object-detection-plugin');

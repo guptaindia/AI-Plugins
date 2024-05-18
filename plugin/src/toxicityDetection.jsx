@@ -24,6 +24,11 @@ const ToxicityPlugin = ({
     }
     loadModel();
   }, []);
+
+  useEffect(() => {
+    console.log(document.a);
+  }, [])
+  
   
   async function predict() {
     let inputElement = document.getElementById('text-input');

@@ -24,7 +24,13 @@
   <!-- <div id="root"></div> -->
   <!-- <div id="object-detection-plugin"></div> -->
   <!-- <div id="gesture-recognition-plugin"></div> -->
-  <div id="voice-recognition"></div>
+  <div id="voice-recognition">
+    <script>
+      const callBack = (value) => {
+        console.log(value);
+      }
+    </script>
+  </div>
   <!-- <div id="toxicity-plugin">
     <input type="text" id="text-input">
     <button id="trigger">Make Prediction</button>
@@ -50,7 +56,8 @@
       <button class="rounded-full border-4 p-2"> next page </button>
     </a>
   </div>
- 
+
+
   <script type="module" src="/src/main.jsx"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/toxicity"></script>

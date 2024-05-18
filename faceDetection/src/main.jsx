@@ -3,8 +3,12 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 
-ReactDOM.createRoot(document.getElementById('face-detection-plugin')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+const element = document.getElementById('face-detection-plugin');
+if (element) {
+  const innerContent = element.innerHTML;
+  ReactDOM.createRoot().render(
+    <React.StrictMode>
+      <App content={innerContent} />
+    </React.StrictMode>,
+  )
+}

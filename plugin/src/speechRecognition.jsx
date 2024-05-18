@@ -4,7 +4,6 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { IconMicrophone,IconPlayerStopFilled, IconPlayerPause, IconPlayerRecordFilled } from '@tabler/icons-react';
 
 
-
 const InfoModal = ({ icon, title, description, showModal, setShowModal, centered = false, duration = 2000 }) => {
 
   useEffect(() => {
@@ -34,8 +33,9 @@ const InfoModal = ({ icon, title, description, showModal, setShowModal, centered
 }
 
 
-const Dictaphone1 = () => {
+const Dictaphone1 = ({content}) => {
 
+  console.log(content);
   const [message, setMessage] = useState('');
 
   const [showModal, setShowModal] = useState(false);
@@ -55,6 +55,18 @@ const Dictaphone1 = () => {
     })
     setShowModal(true);
   }
+
+  useEffect(() => {
+    if(content){
+      console.log(content);
+      const script =  content.split('\n').slice(2, -2).join('\n');
+      console.log(script);
+      eval(script);
+      console.log(a);
+      callBack('my value');
+    }
+  }, [])
+  
 
   const commands = [
     {
@@ -121,6 +133,8 @@ const Dictaphone1 = () => {
       language: 'en-GB',
     });
   };
+
+  
 
   return (
     <>

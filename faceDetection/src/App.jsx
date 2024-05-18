@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import * as blazeface from '@tensorflow-models/blazeface';
 
-const App = () => {
+const App = ({content}) => {
 
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
@@ -18,6 +18,15 @@ const App = () => {
       // call detect faces every 100 milliseconds or 10 times every second
       setInterval(detectFaces, 100);
     });
+  }, [])
+
+  useEffect(() => {
+    if(content){
+      console.log(content);
+      const script =  content.split('\n').slice(2, -2).join('\n');
+      console.log(script);
+      eval(script);
+    }
   }, [])
 
 
@@ -40,7 +49,8 @@ const App = () => {
   const detectFaces = async () => {
     const prediction = await model.estimateFaces(video, false);
 
-    console.log(prediction);
+    // console.log(prediction);
+    callBack(prediction);
 
     // draw the video first
     ctx.drawImage(video, 0, 0, 600, 400);

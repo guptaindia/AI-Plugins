@@ -10,9 +10,9 @@ export default function CardHoverEffectDemo() {
 }
 export const projects = [
   {
-    title: "Stripe",
+    title: "Ease of use",
     description:
-      "A technology company that builds economic infrastructure for the internet.",
+      "Our JavaScript models are designed for quick and easy integration into your existing web projects.   ",
     link: "https://stripe.com",
   },
   {
