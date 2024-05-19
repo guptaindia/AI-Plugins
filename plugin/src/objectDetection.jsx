@@ -15,7 +15,7 @@ function ObjDetect({width=640, height=480}) {
   // Main function
   const runCoco = async () => {
     const net = await cocossd.load();
-    console.log("Handpose model loaded.");
+    console.log("model loaded.");
     //  Loop and detect hands
     setInterval(() => {
       detect(net);
@@ -44,6 +44,8 @@ function ObjDetect({width=640, height=480}) {
 
       // Make Detections
       const obj = await net.detect(video);
+      callBack(obj);
+  
 
       // Draw mesh
       const ctx = canvasRef.current.getContext("2d");
@@ -59,7 +61,7 @@ function ObjDetect({width=640, height=480}) {
         <Webcam
           ref={webcamRef}
           muted={true} 
-          mirrored={true}
+          mirrored={false}
           style={{
             position: "absolute",
             zindex: 9,
