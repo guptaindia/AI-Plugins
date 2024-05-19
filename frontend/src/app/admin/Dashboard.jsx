@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react'
 
-const AdminDashboard = ({children}) => {
+const AdminDashboard = ({ children }) => {
   return (
     <>
       <div className="antialiased bg-black w-full min-h-screen text-slate-300 relative py-4">
@@ -62,7 +62,7 @@ const AdminDashboard = ({children}) => {
                   </div>
                 </div>
               </Link>
-            
+
               <Link
                 href="/admin/manageuser"
                 className="hover:bg-white/10 transition duration-150 ease-linear rounded-lg py-3 px-2 group"
@@ -137,9 +137,11 @@ const AdminDashboard = ({children}) => {
           </div>
           <div id="content" className="bg-white/10 col-span-9 rounded-lg p-6">
             <div id="24h">
-                     </div>
+              {children}
+            </div>
           </div>
-        </div></div></>
+        </div></div>
+    </>
 
   )
 }

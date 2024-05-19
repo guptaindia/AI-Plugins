@@ -28,7 +28,8 @@ const Signup = () => {
       fullname: '',
       email: '',
       password: '',
-      confirmPassword: ''
+      confirmPassword: '',
+      role:''
     },
     onSubmit: (values) => {
       console.log(values);
@@ -171,3 +172,5 @@ const Signup = () => {
 }
 
 export default Signup;
+
+
