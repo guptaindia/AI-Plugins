@@ -22,19 +22,38 @@
 
 <body>
   <!-- <div id="root"></div> -->
-  <!-- <div id="object-detection-plugin"></div> -->
-  <!-- <div id="gesture-recognition-plugin"></div> -->
-  <div id="voice-recognition">
+  <!-- <div id="object-detection-plugin">
+    <script>
+      const callBack = (value) => {
+        console.table(value);
+      }
+    </script>
+  </div> -->
+  <div id="gesture-recognition-plugin">
     <script>
       const callBack = (value) => {
         console.log(value);
       }
     </script>
   </div>
+  <!-- <div id="voice-recognition">
+    <script>
+      const callBack = (value) => {
+        console.log(value);
+      }
+    </script>
+  </div> -->
   <!-- <div id="toxicity-plugin">
     <input type="text" id="text-input">
     <button id="trigger">Make Prediction</button>
     <p id="output"></p>
+  </div> -->
+  <!-- <div id ='face-detection-plugin'>
+    <script>
+      const callBack = (value) => {
+        console.log(value);
+      }
+    </script>
   </div> -->
   <div class="mysection">
     <h1 class="">Section content</h1>
@@ -58,7 +77,7 @@
   </div>
 
 
-  <script type="module" src="/src/main.jsx"></script>
+  <script type="module" src="./src/main.jsx"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/toxicity"></script>
 </body>

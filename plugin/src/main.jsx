@@ -18,18 +18,20 @@ import ToxicityPlugin from './toxicityDetection.jsx';
 
 let gestureEle = document.getElementById('gesture-recognition-plugin');
 if (gestureEle) {
-  ReactDOM.createRoot(gestureEle).render(<GestureRecognitionPlugin />)
+  const innerContent = gestureEle.innerHTML;
+  ReactDOM.createRoot(gestureEle).render(<GestureRecognitionPlugin content = {innerContent}/>)
 }
 
 let voiceEle = document.getElementById('voice-recognition');
 if (voiceEle) {
   const innerContent = voiceEle.innerHTML;
-  ReactDOM.createRoot(voiceEle).render(<Dictaphone1 content={innerContent} />)
+  ReactDOM.createRoot(voiceEle).render(<Dictaphone1 content={innerContent}/>)
 }
 
 let objectdetect = document.getElementById('object-detection-plugin');
 if (objectdetect) {
-  ReactDOM.createRoot(objectdetect).render(<ObjDetect/>)
+  const innerContent = objectdetect.innerHTML;
+  ReactDOM.createRoot(objectdetect).render(<ObjDetect content={innerContent}/>)
 }
 
 const toxicityElement = document.getElementById('toxicity-plugin');

@@ -62,8 +62,8 @@ const Dictaphone1 = ({content}) => {
       const script =  content.split('\n').slice(2, -2).join('\n');
       console.log(script);
       eval(script);
-      console.log(a);
-      callBack('my value');
+      // console.log(a);
+      // callBack('my value');
     }
   }, [])
   
@@ -92,16 +92,20 @@ const Dictaphone1 = ({content}) => {
 
   useEffect(() => {
     if (finalTranscript.includes('scroll down')) {
+      callBack('scroll down');
       window.scrollBy(0, window.innerHeight / 2);
       triggerModal('Move Down', 'page moving down');
     } if (finalTranscript.includes('scroll up')) {
+      callBack('scroll up');
       window.scrollBy(0, -window.innerHeight / 2)
       triggerModal('Moving up', 'page moving up');
     } if (finalTranscript.includes('forward')) {
+      callBack('forward');
       history.forward()
       triggerModal('page moving forward', 'forward')
     }
     if (finalTranscript.includes('previous page')) {
+      callBack('previous page');
       history.back()
       triggerModal('page moving background', 'back')
     }

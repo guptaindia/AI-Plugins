@@ -1,6 +1,6 @@
 
 // import GestureRecognition from './GestureRecognition'
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 // import * as tf from "@tensorflow/tfjs";
 import * as handpose from "@tensorflow-models/handpose";
 import Webcam from "react-webcam";
@@ -40,7 +40,8 @@ import raised_fist from "./img/raised_fist.png";
 
 
 
-const GestureRecognitionPlugin = () => {
+const GestureRecognitionPlugin = ({content}) => {
+  console.log(content);
 
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
@@ -67,7 +68,7 @@ const GestureRecognitionPlugin = () => {
 
   const runHandpose = async () => {
     const net = await handpose.load();
-    //console.log("handpose model loaded");
+    console.log("model loaded");
     // loop and detect hand
     setInterval(() => {
       detect(net)
@@ -117,15 +118,25 @@ const GestureRecognitionPlugin = () => {
             Math.max.apply(null, confidence)
           );
           setEmoji(gesture.gestures[maxConfidence].name);
+          callBack(gesture.gestures[maxConfidence].name);
         }
       }
 
       // Draw mesh
       const ctx = canvasRef.current.getContext("2d");
       drawHand(hand, ctx);
-
     }
   }
+  useEffect(() => {
+    if(content){
+      console.log(content);
+      const script =  content.split('\n').slice(2, -2).join('\n');
+      console.log(script);
+      eval(script);
+      // console.log(a);
+      // callBack('my value');
+    }
+  }, [])
   runHandpose();
   return (
     <div>
@@ -147,6 +158,7 @@ const GestureRecognitionPlugin = () => {
 
             }} />
           <canvas ref={canvasRef}
+          
             style={{
               position: "absolute",
               marginLeft: "auto",
