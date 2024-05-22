@@ -13,7 +13,7 @@ const loginSchema = Yup.object().shape({
 });
 
 const Login = () => {
-  const { setLoggedIn, axiosInstance } = useAppContext();
+  const { setLoggedIn, axiosInstance, setCurrentuser } = useAppContext();
   const router = useRouter();
 
   const loginForm = useFormik({
@@ -31,6 +31,7 @@ const Login = () => {
               console.log(data);
               sessionStorage.setItem('user', JSON.stringify(data))
               setLoggedIn(true)
+              setCurrentuser(data);
               router.push('/');
               action.resetForm();
             }).catch((err) => {

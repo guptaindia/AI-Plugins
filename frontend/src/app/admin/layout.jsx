@@ -1,6 +1,6 @@
 import React from 'react'
 import AdminNavbar from './navbar'
-import AdminDashboard from './Dashboard'
+import AdminDashboard from './manageuser/dashboard'
 
 const Layout = ({ children }) => {
     return (

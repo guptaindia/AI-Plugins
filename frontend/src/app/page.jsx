@@ -33,17 +33,17 @@ const Home = () => {
             <dl className="grid gap-12 mt-12 lg:grid-cols-2">
               <div>
                 <dt className="text-lg font-medium text-black">
-                  What kind of support can I expect?
+                  Who can use it?
                 </dt>
                 <dd className="mt-2 text-base font-medium text-gray-500">
-                  We offer comprehensive support including live chat, email, and phone.
-                  Our support team is available 24/7 to assist with any issues or
-                  questions you might have.
+               using AI plugins, users can significantly enhance their applications' functionality,
+                 improve user experiences, ensure safety and compliance, and drive innovation across various industries.mainly 
+                Developers and Programmers,Data Scientists , Machine Learning Engineers  etc can use this website.
                 </dd>
               </div>
               <div>
                 <dt className="text-lg font-medium text-black">
-                  How secure is my payment information?
+                  what are the advantages of AI plugins?
                 </dt>
                 <dd className="mt-2 text-base font-medium text-gray-500">
                   Your payment information is extremely secure. We use industry-standard
@@ -101,7 +101,7 @@ const Home = () => {
                 <div className="grid items-end grid-cols-1 lg:grid-cols-2">
                   <div>
                     <span className="text-sm font-semibold text-gray-500 uppercase">
-                      ❖ windstatic
+                      ❖ BRAINYBOLT
                     </span>
                     <p className="mt-8 text-4xl font-semibold tracking-tighter text-black text-balance">
                       Subscribe for the latest updates

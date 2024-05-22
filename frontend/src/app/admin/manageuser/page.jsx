@@ -3,6 +3,7 @@ import Link from 'next/link';
 import React, { useEffect } from 'react'
 import { useState } from 'react';
 
+
 const ManageUser = () => {
 
   const [userList, setUserList] = useState([]);
@@ -36,9 +37,9 @@ const ManageUser = () => {
         </div>
       </td>
       <td className="py-3 px-2">{item.email}</td>
-      <td className="py-3 px-2">{item.role}</td>
+       {/* <td className="py-3 px-2">{item.role}</td>  */}
       <td className="py-3 px-2">
-        <div className="inline-flex items-center space-x-3">
+        {/* <div className="inline-flex items-center space-x-3">
           <Link href="" title="Edit" className="hover:text-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -95,7 +96,7 @@ const ManageUser = () => {
               />
             </svg>
           </Link>
-        </div>
+        </div> */}
       </td>
     </tr>
 
@@ -111,8 +112,8 @@ const ManageUser = () => {
               <tr>
                 <th className="text-left py-3 px-2 rounded-l-lg">Name</th>
                 <th className="text-left py-3 px-2">Email</th>
-                <th className="text-left py-3 px-2">Role</th>
-                <th className="text-left py-3 px-2 rounded-r-lg">Actions</th>
+                 {/* <th className="text-left py-3 px-2"></th> 
+                <th className="text-left py-3 px-2 rounded-r-lg">Actions</th> */}
               </tr>
             </thead>
             <tbody>

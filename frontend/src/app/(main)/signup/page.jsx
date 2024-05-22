@@ -4,6 +4,7 @@ import { useFormik } from 'formik';
 
 import * as Yup from 'yup';
 import toast from 'react-hot-toast';
+import { useRouter } from 'next/navigation';
 
 const signupSchema = Yup.object().shape({
   fullname: Yup.string().required('Enter your name')
@@ -21,6 +22,8 @@ const signupSchema = Yup.object().shape({
 });
 
 const Signup = () => {
+
+  const router = useRouter();
 
   const [showPassword,setShowPassword] = useState(false)
   const signupForm = useFormik({
@@ -44,6 +47,7 @@ const Signup = () => {
             .then((res) => {
                 if(res.status === 200){
                     toast.success('Signup Successfull');
+                    router.push("/login")
                 }else {
                     toast.error('error in Signing up')
                 }
@@ -100,6 +104,77 @@ const Signup = () => {
 
 
             </div>
+{/* radion buttons
+            <div>
+            <fieldset>
+  <legend className="text-sm font-semibold leading-6 text-gray-900">
+  ROLE
+  </legend>
+ 
+  <div className="mt-6 space-y-6">
+    <div className="flex items-center gap-x-3">
+      <input
+        
+        name="role"
+        type="radio"
+        onChange={signupForm.handleChange}
+        values={signupForm.values.role}
+        className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+      />
+      <label
+        htmlFor="student"
+        className="block text-sm font-medium leading-6 text-gray-900"
+      >
+        student
+      </label>
+   
+      <input
+       
+        name="role"
+        type="radio"
+        onChange={e => {
+          if(e.target.value === 'on'){
+            signupForm.setFieldValue('teacher')
+          }else{
+            signupForm.setFieldValue('other')
+          }
+        }}
+        values={signupForm.values.role}
+        className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+      />
+      <label
+        htmlFor="teacher"
+        className="block text-sm font-medium leading-6 text-gray-900"
+      >
+        teacher
+      </label>
+    
+      <input
+        // id="push-nothing"
+        name="role"
+        type="radio"
+        onChange={e => {
+          if(e.target.value === 'on'){
+            signupForm.setFieldValue('student')
+          }else{
+            signupForm.setFieldValue('other')
+          }
+        }}
+        values={signupForm.values.role}
+        className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+      />
+      <label
+        htmlFor="other"
+        className="block text-sm font-medium leading-6 text-gray-900"
+      >
+        other
+        
+      </label>
+    </div>
+  </div>
+</fieldset> 
+
+            </div>*/}
           
 
             <div>

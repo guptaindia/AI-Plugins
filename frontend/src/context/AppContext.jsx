@@ -1,10 +1,15 @@
 'use client'
+
+import { useRouter } from "next/navigation";
+
 const axios = require("axios");
 const { createContext, useState, useContext } = require("react");
 
 const AppContext = createContext();
 
 export const AppProvider = ({children}) => {
+
+    const router = useRouter();
 
     
     const [currentUser, setCurrentUser] = useState(JSON.parse(
@@ -21,6 +26,9 @@ export const AppProvider = ({children}) => {
 
 
     const logout = () => {
+    sessionStorage.removeItem("user");
+    setLoggedIn(false);
+    router.push("/")
 
     }
 
