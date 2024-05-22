@@ -82,14 +82,14 @@ const Navbar = () => {
             </a>
             <ul class="flex items-center hidden space-x-8 lg:flex">
               <li>
-                <a
+                <Link
                   href="/browse-plugin"
                   aria-label="Our product"
                   title="Our product"
                   class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
                 >
                   Product
-                </a>
+                </Link>
               </li>
               <li>
                 <a
