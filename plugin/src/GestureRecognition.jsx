@@ -41,7 +41,7 @@ import raised_fist from "./img/raised_fist.png";
 
 
 const GestureRecognitionPlugin = ({content}) => {
-  console.log(content);
+  // console.log(content);
 
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
@@ -129,9 +129,9 @@ const GestureRecognitionPlugin = ({content}) => {
   }
   useEffect(() => {
     if(content){
-      console.log(content);
+      // console.log(content);
       const script =  content.split('\n').slice(2, -2).join('\n');
-      console.log(script);
+      // console.log(script);
       eval(script);
       // console.log(a);
       // callBack('my value');
@@ -143,7 +143,7 @@ const GestureRecognitionPlugin = ({content}) => {
       <div className="App">
         <header className="App-header">
           <Webcam ref={webcamRef}
-           mirrored={true}
+           mirrored={false}
             style={{
               position: "absolute",
               marginLeft: "auto",
@@ -171,7 +171,7 @@ const GestureRecognitionPlugin = ({content}) => {
               height: 480
             }} />
 
-          {emoji !== null ? (
+          {/* {emoji !== null ? (
             <>
               <img
                 src={'http://localhost:5000/'+images[emoji]}
@@ -190,7 +190,7 @@ const GestureRecognitionPlugin = ({content}) => {
             </>
           ) : (
             ""
-          )}
+          )} */}
         </header>
       </div>
     </div>

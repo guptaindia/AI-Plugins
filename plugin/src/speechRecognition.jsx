@@ -22,7 +22,7 @@ const InfoModal = ({ icon, title, description, showModal, setShowModal, centered
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 1.0 }}
       >
         <p>{icon}</p>
         <h2 className='text-2xl font-bold'>{title}</h2>
@@ -35,7 +35,9 @@ const InfoModal = ({ icon, title, description, showModal, setShowModal, centered
 
 const Dictaphone1 = ({content}) => {
 
-  console.log(content);
+ 
+
+  // console.log(content);
   const [message, setMessage] = useState('');
 
   const [showModal, setShowModal] = useState(false);
@@ -58,9 +60,9 @@ const Dictaphone1 = ({content}) => {
 
   useEffect(() => {
     if(content){
-      console.log(content);
+      // console.log(content);
       const script =  content.split('\n').slice(2, -2).join('\n');
-      console.log(script);
+      // console.log(script);
       eval(script);
       // console.log(a);
       // callBack('my value');
@@ -90,28 +92,30 @@ const Dictaphone1 = ({content}) => {
     listening,
   } = useSpeechRecognition({ commands });
 
+
   useEffect(() => {
+  // callBack(finalTranscript);
     if (finalTranscript.includes('scroll down')) {
       callBack('scroll down');
       window.scrollBy(0, window.innerHeight / 2);
       triggerModal('Move Down', 'page moving down');
+      resetTranscript()
     } if (finalTranscript.includes('scroll up')) {
       callBack('scroll up');
       window.scrollBy(0, -window.innerHeight / 2)
       triggerModal('Moving up', 'page moving up');
+      resetTranscript()
     } if (finalTranscript.includes('forward')) {
       callBack('forward');
       history.forward()
       triggerModal('page moving forward', 'forward')
+      resetTranscript()
     }
-    if (finalTranscript.includes('previous page')) {
+    if (finalTranscript.includes('backward')) {
       callBack('previous page');
       history.back()
-      triggerModal('page moving background', 'back')
-    }
-    if (finalTranscript.includes('zoom in')) {
-      // document.body.style.zoom =  
-      triggerModal('zooming in', 'zoom')
+      triggerModal('page moving background', 'backward')
+      resetTranscript()
     }
   }, [finalTranscript]);
 
@@ -153,8 +157,6 @@ const Dictaphone1 = ({content}) => {
         </div>
 
         <InfoModal {...modalOptions} showModal={showModal} setShowModal={setShowModal} />
-
-
       </div>
       <div className='fixed z-10 bottom-3 bg-slate-700 text-white p-2'>
         {transcript}

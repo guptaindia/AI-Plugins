@@ -19,7 +19,7 @@ function ObjDetect({width=640, height=480}) {
     //  Loop and detect hands
     setInterval(() => {
       detect(net);
-    }, 10);
+    }, 999);
   };
 
   const detect = async (net) => {
