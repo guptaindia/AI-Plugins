@@ -13,7 +13,7 @@ const loginSchema = Yup.object().shape({
 });
 
 const Login = () => {
-  const { setLoggedIn, axiosInstance, setCurrentuser } = useAppContext();
+  const { setLoggedIn, axiosInstance, setCurrentUser } = useAppContext();
   const router = useRouter();
 
   const loginForm = useFormik({
@@ -21,22 +21,28 @@ const Login = () => {
       email: '',
       password: '',
     },
-    onSubmit: (values) => {
+    onSubmit: (values, action) => {
       console.log(values);
       axiosInstance.post('/user/authenticate', JSON.stringify(values), {
         headers: { 'Content-Type': 'application/json' }
       })
         .then((data) => {
-              toast.success("Login sucessful")
-              console.log(data);
-              sessionStorage.setItem('user', JSON.stringify(data))
-              setLoggedIn(true)
-              setCurrentuser(data);
-              router.push('/');
-              action.resetForm();
-            }).catch((err) => {
-              console.log(err);
-            });
+          console.log(data);
+          toast.success("Login sucessful")
+          console.log(data);
+          sessionStorage.setItem('user', JSON.stringify(data))
+          setLoggedIn(true)
+          setCurrentUser(data);
+          router.push('/');
+          action.resetForm();
+        }).catch((err) => {
+          console.log(err);
+          if (err.response.status === 401) {
+            toast.error('Invalid Email or Password');
+          } else {
+            toast.error('Something went wrong');
+          }
+        });
     },
     validationSchema: loginSchema
   })
@@ -58,7 +64,7 @@ const Login = () => {
                 Sign up here
               </a>
             </p>
-          </div>  
+          </div>
           <div className="mt-5">
             <button
               type="button"
@@ -199,7 +205,7 @@ const Login = () => {
                 </div>
                 {/* End Form Group */}
                 {/* Checkbox */}
-                <div  className="flex items-center">
+                <div className="flex items-center">
                   <div className="flex">
                     <input
                       id="remember-me"

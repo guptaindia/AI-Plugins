@@ -36,9 +36,9 @@ const Home = () => {
                   Who can use it?
                 </dt>
                 <dd className="mt-2 text-base font-medium text-gray-500">
-               using AI plugins, users can significantly enhance their applications' functionality,
+                Users can significantly enhance their applications' functionality,
                  improve user experiences, ensure safety and compliance, and drive innovation across various industries.mainly 
-                Developers and Programmers,Data Scientists , Machine Learning Engineers  etc can use this website.
+                Developers and Programmers, Machine Learning Engineers etc can use this website.
                 </dd>
               </div>
               <div>
@@ -53,7 +53,7 @@ const Home = () => {
               </div>
               <div>
                 <dt className="text-lg font-medium text-black">
-                  Can I cancel my subscription at any time?
+                What is AI functionality and how can it benefit my website
                 </dt>
                 <dd className="mt-2 text-base font-medium text-gray-500">
                   Yes, you can cancel your subscription at any time. There are no
@@ -62,7 +62,7 @@ const Home = () => {
               </div>
               <div>
                 <dt className="text-lg font-medium text-black">
-                  How often are platform updates released?
+                Can I integrate multiple AI plugins on my site?
                 </dt>
                 <dd className="mt-2 text-base font-medium text-gray-500">
                   We regularly update the platform to introduce new features and
@@ -72,7 +72,7 @@ const Home = () => {
               </div>
               <div>
                 <dt className="text-lg font-medium text-black">
-                  Is there a community or forum where I can discuss with other users?
+                How often are your plugins updated?
                 </dt>
                 <dd className="mt-2 text-base font-medium text-gray-500">
                   Yes, we have a community forum where users can share tips, ask
@@ -82,7 +82,7 @@ const Home = () => {
               </div>
               <div>
                 <dt className="text-lg font-medium text-black">
-                  Do you offer training or resources for new users?
+                Can I use your AI plugins for real-time data analysis?
                 </dt>
                 <dd className="mt-2 text-base font-medium text-gray-500">
                   Absolutely! We provide a comprehensive knowledge base, video

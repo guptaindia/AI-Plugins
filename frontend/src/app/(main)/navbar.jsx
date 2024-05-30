@@ -6,26 +6,54 @@ import React, { useState } from "react"
 
 const Navbar = () => {
 
-  const { loggedIn, logout } = useAppContext();
+  const { loggedIn, logout, currentUser } = useAppContext();
 
   const showLoggedIn = () => {
     if (loggedIn) {
       return (
 
-        <div className="relative flex items-center justify-between">
-          <ul class="flex items-center hidden space-x-8 lg:flex">
-            <li>
-              <button
-                type="button"
-                class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                aria-label="Sign up"
-                title="Sign up"
-                onClick={logout}
-              >
-                Logout
-              </button>
-            </li>
-          </ul>
+        <div className="hs-dropdown relative inline-flex z-40" >
+          <button
+            id="hs-dropdown-custom-trigger"
+            type="button"
+            className="hs-dropdown-toggle py-1 ps-1 pe-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-full border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800"
+          >
+            <img
+              className="w-8 h-auto rounded-full"
+              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
+              alt="Maria"
+            />
+            <span className="text-gray-600 font-medium truncate max-w-[7.5rem] dark:text-neutral-400">
+              {currentUser.fullname}
+            </span>
+            <svg
+              className="hs-dropdown-open:rotate-180 size-4"
+              xmlns="http://www.w3.org/2000/svg"
+              width={24}
+              height={24}
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="m6 9 6 6 6-6" />
+            </svg>
+          </button>
+          <div
+            className="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-60 bg-white shadow-md rounded-lg p-2 mt-2 dark:bg-neutral-800 dark:border dark:border-neutral-700"
+            aria-labelledby="hs-dropdown-custom-trigger"
+          >
+
+            <button
+              className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700"
+              type="button"
+              onClick={logout}
+            >
+              Logout
+            </button>
+          </div>
         </div>
       )
     } else {
@@ -121,70 +149,16 @@ const Navbar = () => {
                   About us
                 </a>
               </li>
-            </ul>       
-  <div style={{zIndex: 100}}>
-                <img
-                  id="avatarButton"
-                  type="button"
-                  data-dropdown-toggle="userDropdown"
-                  data-dropdown-placement="bottom-start"
-                  className="w-10 h-10 rounded-full cursor-pointer"
-                  src="/cardImg2.jpg"
-                  alt="User dropdown"
-                />
-                {/* Dropdown menu */}
-                <div
-                  id="userDropdown"
-                  className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
-                >
-                  <div className="px-4 py-3 text-sm text-gray-900 dark:text-white">
-                    <div>Bonnie Green</div>
-                    <div className="font-medium truncate">name@flowbite.com</div>
-                  </div>
-                  <ul
-                    className="py-2 text-sm text-gray-700 dark:text-gray-200"
-                    aria-labelledby="avatarButton"
-                  >
-                    <li>
-                      <a
-                        href="#"
-                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >
-                        Dashboard
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >
-                        Settings
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >
-                        Earnings
-                      </a>
-                    </li>
-                  </ul>
-                  <div className="py-1">
-                    <a
-                      href="#"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                    >
-                      Sign out
-                    </a>
-                  </div>
-                </div>
-                {
-                  showLoggedIn()
-                }
-  </div>
+            </ul>
+            <div style={{ zIndex: 100 }}>
 
-            <div class="lg:hidden" style={{zIndex: 100}}>
+
+              {
+                showLoggedIn()
+              }
+            </div>
+
+            <div class="lg:hidden" style={{ zIndex: 100 }}>
               <button
                 aria-label="Open Menu"
                 title="Open Menu"

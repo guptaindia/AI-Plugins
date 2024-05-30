@@ -21,7 +21,7 @@ export const AppProvider = ({children}) => {
         timeout: 5000,
         // headers: {'x-auth-token': currentUser.token}
       });
-    const [loggedIn, setLoggedIn] = useState(false);
+    const [loggedIn, setLoggedIn] = useState(currentUser!==null);
 
 
 
