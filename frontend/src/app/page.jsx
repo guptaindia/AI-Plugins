@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import Wavyground from './wavy-background';
 import Navbar from './(main)/navbar';
@@ -5,6 +6,7 @@ import Navbar from './(main)/navbar';
 // import CardHoverEffectDemo from './card-hover-effect';
 import { WobbleCardDemo } from './wobble-card';
 // import UserNavbar from './user/user-navbar';
+
 
 
 const Home = () => {
@@ -16,9 +18,114 @@ const Home = () => {
 
       </div>
       <Wavyground title={'Rapidly use modern AI model without ever leaving your code.'} description={'A javascript framework packed with models like gesture, semantic, speech and object detection that can be composed to build on your code, directly on website.'}/>
-      <h1 className='text-2xl md:text-4xl lg:text-5xl text-black font-bold inter-var text-center'>Features</h1>
-      {/* <CardHoverEffectDemo/> */}
+      {/* <h1 className='text-2xl md:text-4xl lg:text-5xl text-black font-bold inter-var text-center'>Features</h1> */}
       <WobbleCardDemo/>
+      <div className='team'>
+        <section>
+          <div className="px-8 py-24 mx-auto md:px-12 lg:px-32 max-w-7xl">
+            <div className="grid gap-12 lg:grid-cols-3">
+              <div>
+                <h1 className="text-4xl font-semibold tracking-tighter text-gray-900 lg:text-5xl">
+                  Meet Our Team
+                  <span className="block text-gray-600">Diverse. Skilled. United.</span>
+                </h1>
+                <p className="mt-4 text-base font-medium text-gray-500">
+                  A group of passionate individuals working together to innovate and
+                  excel in our industry.
+                </p>
+              </div>
+              <ul role="list" className="grid gap-12 lg:grid-cols-2 lg:col-span-2">
+                <li>
+                  <div className="space-y-4">
+                    <div className="aspect-[3/2] p-2 overflow-hidden border rounded-3xl">
+                      <img
+                        className="object-cover w-full h-full rounded-2xl"
+                        src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                        alt=""
+                      />
+                    </div>
+                    <div className="inline-flex items-start justify-between w-full">
+                      <div className="space-y-1">
+                        <h3 className="text-lg font-medium leading-6 text-black">
+                          Himanshu Gupta
+                        </h3>
+                        <p className="text-base text-gray-500">
+                          MERN Stack Developer
+                        </p>
+                      </div>
+                      <div>
+                        <ul role="list" className="flex space-x-5">
+                          <li>
+                            <a href="#_" className="text-gray-400 hover:text-gray-500">
+                              <ion-icon
+                                name="logo-dribbble"
+                                role="img"
+                                className="md hydrated"
+                                aria-label="logo dribbble"
+                              />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#_" className="text-gray-400 hover:text-gray-500">
+                              <span className="sr-only"> Twitter </span>
+                              <ion-icon name="logo-twitter"></ion-icon>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div className="space-y-4">
+                    <div className="aspect-[3/2] p-2 overflow-hidden border rounded-3xl">
+                      <img
+                        className="object-cover w-full h-full rounded-2xl"
+                        src="https://images.unsplash.com/photo-1602434228300-a645bce6891b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1639&q=80"
+                        alt=""
+                      />
+                    </div>
+                    <div className="inline-flex items-start justify-between w-full">
+                      <div className="space-y-1">
+                        <h3 className="text-lg font-medium leading-6 text-black">
+                          Priyanshi Diwedi
+                        </h3>
+                        <p className="text-base text-gray-500">MERN Stack Developer</p>
+                      </div>
+                      <div>
+                        <ul role="list" className="flex space-x-5">
+                          <li>
+                            <a href="#_" className="text-gray-400 hover:text-gray-500">
+                              <ion-icon
+                                name="logo-dribbble"
+                                role="img"
+                                className="md hydrated"
+                                aria-label="logo dribbble"
+                              />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#_" className="text-gray-400 hover:text-gray-500">
+                              <span className="sr-only"> Twitter </span>
+                              <ion-icon
+                                name="logo-twitter"
+                                role="img"
+                                className="md hydrated"
+                                aria-label="logo twitter"
+                              />
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </div>
       <div className='faq'>
         <section>
           <div className="px-8 py-24 mx-auto md:px-12 lg:px-32 max-w-7xl">
@@ -36,48 +143,40 @@ const Home = () => {
                   Who can use it?
                 </dt>
                 <dd className="mt-2 text-base font-medium text-gray-500">
-                Users can significantly enhance their applications' functionality,
-                 improve user experiences, ensure safety and compliance, and drive innovation across various industries.mainly 
-                Developers and Programmers, Machine Learning Engineers etc can use this website.
+                Developers can significantly enhance their applications' functionality,
+                 improve user experiences, ensure safety and compliance, and drive innovation across various industries.
                 </dd>
               </div>
               <div>
                 <dt className="text-lg font-medium text-black">
-                  what are the advantages of AI plugins?
+                Are your AI plugins compatible with all website platforms?
                 </dt>
                 <dd className="mt-2 text-base font-medium text-gray-500">
-                  Your payment information is extremely secure. We use industry-standard
-                  encryption and comply with PCI standards to ensure your details are
-                  protected.
+                Our AI plugins are designed to be compatible with most major website platforms, its is just a html code with some javascript so it can work on any platform which uses these.
                 </dd>
               </div>
               <div>
                 <dt className="text-lg font-medium text-black">
-                What is AI functionality and how can it benefit my website
+                How do I install an AI plugin on my website?
                 </dt>
                 <dd className="mt-2 text-base font-medium text-gray-500">
-                  Yes, you can cancel your subscription at any time. There are no
-                  cancellation fees, though no refunds are provided for partial months.
+              Generally, you will need to copy the code, paste it to your website platform, and use the functionality by using the callbacks provided on the console.
                 </dd>
               </div>
               <div>
                 <dt className="text-lg font-medium text-black">
-                Can I integrate multiple AI plugins on my site?
+                Can I customize the AI plugins to fit my website’s design and functionality?
                 </dt>
                 <dd className="mt-2 text-base font-medium text-gray-500">
-                  We regularly update the platform to introduce new features and
-                  improvements. Major updates are released quarterly, while minor
-                  updates and bug fixes are rolled out as needed.
+                Yes, our AI plugins are highly customizable. You can adjust their appearance, behavior, and integration points to match your website’s design and functionality. Detailed customization options are provided in the plugin documentation.
                 </dd>
               </div>
               <div>
                 <dt className="text-lg font-medium text-black">
-                How often are your plugins updated?
+                Are there any limitations to the AI features provided by your plugins?
                 </dt>
                 <dd className="mt-2 text-base font-medium text-gray-500">
-                  Yes, we have a community forum where users can share tips, ask
-                  questions, and connect with others. It's a great place to learn from
-                  fellow users and contribute your own insights.
+                While our AI plugins are powerful, they do have some limitations based on the current state of AI technology and specific use cases.
                 </dd>
               </div>
               <div>
@@ -85,9 +184,7 @@ const Home = () => {
                 Can I use your AI plugins for real-time data analysis?
                 </dt>
                 <dd className="mt-2 text-base font-medium text-gray-500">
-                  Absolutely! We provide a comprehensive knowledge base, video
-                  tutorials, and live webinars to help you get started and make the most
-                  out of our platform.
+                  Absolutely! Yes, many of our AI plugins support real-time data analysis, allowing you to process and analyze data as it is generated on your server.
                 </dd>
               </div>
             </dl>
@@ -108,7 +205,7 @@ const Home = () => {
                     </p>
                     <p className="mx-auto mt-4 text-sm font-medium text-gray-500 text-balance">
                       Join our community to receive updates, design tips, and exclusive
-                      access to our newest and most elegant themes. Your journey to a
+                      access to our newest and most elegant code. Your journey to a
                       sophisticated digital presence begins here.
                     </p>
                   </div>
@@ -148,10 +245,25 @@ const Home = () => {
         </section>
       </div>
       <footer>
-        <div className="px-8 py-12 mx-auto md:px-12 lg:px-32 max-w-7xl">
+        <div className="px-16 py-12 mx-auto md:px-12 lg:px-32 max-w-8xl bg-gray-400">
           <div className="xl:grid xl:grid-cols-3 xl:gap-8">
             <div>
-              <p className="text-2xl font-bold uppercase">windstatic</p>
+            <svg
+              class="w-8 text-teal-accent-400"
+              viewBox="0 0 24 24"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeMiterlimit="10"
+              stroke="currentColor"
+              fill="none"
+            >
+              <rect x="3" y="1" width="7" height="12" />
+              <rect x="3" y="17" width="7" height="6" />
+              <rect x="14" y="1" width="7" height="6" />
+              <rect x="14" y="11" width="7" height="12" />
+            </svg>
+              <p className="text-2xl font-bold uppercase">BrainyBolts</p>
               <p className="mt-2 text-sm font-medium text-gray-500 lg:w-4/5">
                 A set of
                 <em className="text-accent-600" /> elements, templates &amp; layouts
