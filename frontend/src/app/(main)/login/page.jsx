@@ -30,7 +30,9 @@ const Login = () => {
           console.log(data);
           toast.success("Login sucessful")
           console.log(data);
-          sessionStorage.setItem('user', JSON.stringify(data))
+          localStorage.setItem('user', JSON.stringify(data))
+          // set cookie
+          document.cookie = `token=${data.data.token}; path=/; max-age=86400;`;
           setLoggedIn(true)
           setCurrentUser(data);
           router.push('/');
