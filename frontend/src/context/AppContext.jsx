@@ -26,10 +26,11 @@ export const AppProvider = ({ children }) => {
 
 
     const logout = () => {
-        sessionStorage.removeItem("user");
+        localStorage.removeItem("user");
         setLoggedIn(false);
         router.push("/")
-
+        // remove cookie
+        document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     }
 
     return <AppContext.Provider value={{ currentUser, setCurrentUser, axiosInstance, loggedIn, setLoggedIn, logout }} >

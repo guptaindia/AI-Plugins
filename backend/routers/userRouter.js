@@ -135,8 +135,8 @@ router.post('/authenticate', (req, res) => {
         });
 })
 
-module.exports = router;
-
-router.post('/authorise', verifyToken, (req, res) => {
+router.get('/authorise', verifyToken, (req, res) => {
     res.status(200).json({status : 'success'});
 })
+
+module.exports = router;

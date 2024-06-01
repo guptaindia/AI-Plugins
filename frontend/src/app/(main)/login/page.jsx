@@ -30,11 +30,11 @@ const Login = () => {
           console.log(data);
           toast.success("Login sucessful")
           console.log(data);
-          localStorage.setItem('user', JSON.stringify(data))
+          localStorage.setItem('user', JSON.stringify(data.data))
           // set cookie
           document.cookie = `token=${data.data.token}; path=/; max-age=86400;`;
           setLoggedIn(true)
-          setCurrentUser(data);
+          setCurrentUser(data.data);
           router.push('/');
           action.resetForm();
         }).catch((err) => {
