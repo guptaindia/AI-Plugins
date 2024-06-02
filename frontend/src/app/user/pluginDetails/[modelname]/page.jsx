@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { CodeBlock, CopyBlock, dracula } from 'react-code-blocks';
+import { CopyBlock, dracula } from 'react-code-blocks';
 import classes from '../plugin.module.css';
 import BackgroundBoxes from '../backgroundbox';
 import Navbar from '@/app/(main)/navbar';
@@ -23,7 +23,7 @@ const pluginContent = {
     title: "Gesture Recognition",
     image: '/cardImg3.jpg',
     code: `<div id="gesture-recognition-plugin"></div>
-<script type="module" src="http://localhost:5000/main.js"></script>`,
+    <script type="module" src="http://localhost:5000/main.js"></script>`,
     description: 'Gesture recognition is the process of understanding human gestures through computational algorithms, typically using computer vision or machine learning techniques. It involves interpreting movements of the body, hands, fingers, or face to recognize specific gestures that convey meaning or commands',
     features: [
       'Gesture Mapping to Actions',
@@ -32,11 +32,11 @@ const pluginContent = {
       'Real-time Feedback',
     ]
   },
-  'image-classification': {
-    title: "image-classification",
+  'Face-Detection': {
+    title: "Face-Detection",
     image: '/cardImg4.jpg',
     code: ``,
-    description: 'Image classification is a fundamental task in computer vision that involves categorizing an input image into one of several predefined classes or categories. The goal is to teach a machine learning model to recognize and differentiate between different objects or scenes based solely on the visual content of the image',
+    description:'Image classification is a fundamental task in computer vision that involves categorizing an input image into one of several predefined classes or categories. The goal is to teach a machine learning model to recognize and differentiate between different objects or scenes based solely on the visual content of the image',
     features: [
       'clasiification',
       'clasiification',

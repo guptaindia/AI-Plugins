@@ -9,6 +9,7 @@ import { ObjectDetection } from '@tensorflow-models/coco-ssd';
 import ObjDetect from './objectDetection.jsx';
 import ToxicityPlugin from './toxicityDetection.jsx';
 
+
 // ReactDOM.createRoot(document.getElementById('root')).render(
 //   <React.StrictMode>
 //     <App />

@@ -4,6 +4,7 @@ import Wavyground from './wavy-background';
 import Navbar from './(main)/navbar';
 import { useRouter } from 'next/navigation';
 import toast from 'react-hot-toast';
+import { IconBrandLinkedin,IconBrandX, IconBrandGithub} from '@tabler/icons-react';
 
 // import CardHoverEffectDemo from './card-hover-effect';
 import { WobbleCardDemo } from './wobble-card';
@@ -37,10 +38,8 @@ const Home = () => {
   return (
     <div className=''>
       <Navbar/>
-      {/* <UserNavbar/> */}
       <div className='relative bg-[#111827]'>
 
-      </div>
       <Wavyground title={'Rapidly use modern AI model without ever leaving your code.'} description={'A javascript framework packed with models like gesture, semantic, speech and object detection that can be composed to build on your code, directly on website.'}/>
       {/* <h1 className='text-2xl md:text-4xl lg:text-5xl text-black font-bold inter-var text-center'>Features</h1> */}
       <WobbleCardDemo/>
@@ -51,7 +50,7 @@ const Home = () => {
               <div>
                 <h1 className="text-4xl font-semibold tracking-tighter text-gray-900 lg:text-5xl">
                   Meet Our Team
-                  <span className="block text-gray-600">Diverse. Skilled. United.</span>
+                  <span className="block text-gray-400">Diverse. Skilled. United.</span>
                 </h1>
                 <p className="mt-4 text-base font-medium text-gray-500">
                   A group of passionate individuals working together to innovate and
@@ -63,14 +62,14 @@ const Home = () => {
                   <div className="space-y-4">
                     <div className="aspect-[3/2] p-2 overflow-hidden border rounded-3xl">
                       <img
-                        className="object-cover w-full h-full rounded-2xl"
-                        src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                        className="object-cover w-full h-full rounded-2xl grayscale filter "
+                        src='/myphoto.jpg'
                         alt=""
                       />
                     </div>
                     <div className="inline-flex items-start justify-between w-full">
                       <div className="space-y-1">
-                        <h3 className="text-lg font-medium leading-6 text-black">
+                        <h3 className="text-lg font-medium leading-6 text-white">
                           Himanshu Gupta
                         </h3>
                         <p className="text-base text-gray-500">
@@ -81,18 +80,23 @@ const Home = () => {
                         <ul role="list" className="flex space-x-5">
                           <li>
                             <a href="#_" className="text-gray-400 hover:text-gray-500">
-                              <ion-icon
-                                name="logo-dribbble"
+                              <IconBrandLinkedin  
+                                name="logo-linkedin"
                                 role="img"
                                 className="md hydrated"
-                                aria-label="logo dribbble"
+                                aria-label="logo linkedin"
                               />
                             </a>
                           </li>
                           <li>
                             <a href="#_" className="text-gray-400 hover:text-gray-500">
                               <span className="sr-only"> Twitter </span>
-                              <ion-icon name="logo-twitter"></ion-icon>
+                              <IconBrandGithub
+                                name="logo-github"
+                                role="img"
+                                className="md hydrated"
+                                aria-label="logo github"
+                              />
                             </a>
                           </li>
                         </ul>
@@ -111,7 +115,7 @@ const Home = () => {
                     </div>
                     <div className="inline-flex items-start justify-between w-full">
                       <div className="space-y-1">
-                        <h3 className="text-lg font-medium leading-6 text-black">
+                        <h3 className="text-lg font-medium leading-6 text-white">
                           Priyanshi Diwedi
                         </h3>
                         <p className="text-base text-gray-500">MERN Stack Developer</p>
@@ -120,22 +124,22 @@ const Home = () => {
                         <ul role="list" className="flex space-x-5">
                           <li>
                             <a href="#_" className="text-gray-400 hover:text-gray-500">
-                              <ion-icon
-                                name="logo-dribbble"
+                              <IconBrandLinkedin 
+                                name="logo-linkedin"
                                 role="img"
                                 className="md hydrated"
-                                aria-label="logo dribbble"
+                                aria-label="logo linkedin"
                               />
                             </a>
                           </li>
                           <li>
                             <a href="#_" className="text-gray-400 hover:text-gray-500">
                               <span className="sr-only"> Twitter </span>
-                              <ion-icon
-                                name="logo-twitter"
+                              <IconBrandGithub
+                                name="logo-github"
                                 role="img"
                                 className="md hydrated"
-                                aria-label="logo twitter"
+                                aria-label="logo github"
                               />
                             </a>
                           </li>
@@ -154,7 +158,7 @@ const Home = () => {
         <section>
           <div className="px-8 py-24 mx-auto md:px-12 lg:px-32 max-w-7xl">
             <div>
-              <p className="text-4xl font-semibold tracking-tighter text-gray-900">
+              <p className="text-4xl font-semibold tracking-tighter text-gray-200">
                 Frequently Asked Questions
               </p>
               <p className="mt-4 text-base font-medium text-gray-500">
@@ -163,51 +167,51 @@ const Home = () => {
             </div>
             <dl className="grid gap-12 mt-12 lg:grid-cols-2">
               <div>
-                <dt className="text-lg font-medium text-black">
+                <dt className="text-lg font-medium text-gray-200">
                   Who can use it?
                 </dt>
-                <dd className="mt-2 text-base font-medium text-gray-500">
+                <dd className="mt-2 text-base font-medium text-gray-400">
                 Developers can significantly enhance their applications' functionality,
                  improve user experiences, ensure safety and compliance, and drive innovation across various industries.
                 </dd>
               </div>
               <div>
-                <dt className="text-lg font-medium text-black">
+                <dt className="text-lg font-medium text-gray-200">
                 Are your AI plugins compatible with all website platforms?
                 </dt>
-                <dd className="mt-2 text-base font-medium text-gray-500">
+                <dd className="mt-2 text-base font-medium text-gray-400">
                 Our AI plugins are designed to be compatible with most major website platforms, its is just a html code with some javascript so it can work on any platform which uses these.
                 </dd>
               </div>
               <div>
-                <dt className="text-lg font-medium text-black">
+                <dt className="text-lg font-medium text-gray-200">
                 How do I install an AI plugin on my website?
                 </dt>
-                <dd className="mt-2 text-base font-medium text-gray-500">
+                <dd className="mt-2 text-base font-medium text-gray-400">
               Generally, you will need to copy the code, paste it to your website platform, and use the functionality by using the callbacks provided on the console.
                 </dd>
               </div>
               <div>
-                <dt className="text-lg font-medium text-black">
+                <dt className="text-lg font-medium text-gray-200">
                 Can I customize the AI plugins to fit my website’s design and functionality?
                 </dt>
-                <dd className="mt-2 text-base font-medium text-gray-500">
+                <dd className="mt-2 text-base font-medium text-gray-400">
                 Yes, our AI plugins are highly customizable. You can adjust their appearance, behavior, and integration points to match your website’s design and functionality. Detailed customization options are provided in the plugin documentation.
                 </dd>
               </div>
               <div>
-                <dt className="text-lg font-medium text-black">
+                <dt className="text-lg font-medium text-gray-200">
                 Are there any limitations to the AI features provided by your plugins?
                 </dt>
-                <dd className="mt-2 text-base font-medium text-gray-500">
+                <dd className="mt-2 text-base font-medium text-gray-400">
                 While our AI plugins are powerful, they do have some limitations based on the current state of AI technology and specific use cases.
                 </dd>
               </div>
               <div>
-                <dt className="text-lg font-medium text-black">
+                <dt className="text-lg font-medium text-gray-200">
                 Can I use your AI plugins for real-time data analysis?
                 </dt>
-                <dd className="mt-2 text-base font-medium text-gray-500">
+                <dd className="mt-2 text-base font-medium text-gray-4 00">
                   Absolutely! Yes, many of our AI plugins support real-time data analysis, allowing you to process and analyze data as it is generated on your server.
                 </dd>
               </div>
@@ -215,10 +219,10 @@ const Home = () => {
           </div>
         </section>
       <div className='newsletter'>
-        <section>
+        <section className=''>
           <div className="px-8 py-12 mx-auto md:px-12 lg:px-32 max-w-7xl">
-            <div className="p-2 border bg-gray-50 rounded-3xl">
-              <div className="p-10 bg-white border shadow-lg md:p-20 rounded-3xl">
+            <div className="p-2  rounded-3xl bg-gray-600">
+              <div className="p-10 bg-white border shadow-lg md:p-20 rounded-3xl bg-gray-200">
                 <div className="grid items-end grid-cols-1 lg:grid-cols-2">
                   <div>
                     <span className="text-sm font-semibold text-gray-500 uppercase">
@@ -364,7 +368,7 @@ const Home = () => {
       </footer>
 
       </div>
-
+      </div>
     </div>
 
   )
