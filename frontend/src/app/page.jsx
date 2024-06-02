@@ -4,7 +4,7 @@ import Wavyground from './wavy-background';
 import Navbar from './(main)/navbar';
 import { useRouter } from 'next/navigation';
 import toast from 'react-hot-toast';
-import { IconBrandLinkedin,IconBrandX, IconBrandGithub} from '@tabler/icons-react';
+import { IconBrandLinkedin,IconBrandGithub} from '@tabler/icons-react';
 
 // import CardHoverEffectDemo from './card-hover-effect';
 import { WobbleCardDemo } from './wobble-card';
@@ -63,7 +63,7 @@ const Home = () => {
                     <div className="aspect-[3/2] p-2 overflow-hidden border rounded-3xl">
                       <img
                         className="object-cover w-full h-full rounded-2xl grayscale filter "
-                        src='/myphoto.jpg'
+                        src='/myphoto2.jpeg'
                         alt=""
                       />
                     </div>
@@ -108,8 +108,8 @@ const Home = () => {
                   <div className="space-y-4">
                     <div className="aspect-[3/2] p-2 overflow-hidden border rounded-3xl">
                       <img
-                        className="object-cover w-full h-full rounded-2xl"
-                        src="https://images.unsplash.com/photo-1602434228300-a645bce6891b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1639&q=80"
+                        className="object-cover w-full h-full rounded-2xl grayscale filter"
+                        src='priphoto.jpeg'
                         alt=""
                       />
                     </div>
@@ -211,7 +211,7 @@ const Home = () => {
                 <dt className="text-lg font-medium text-gray-200">
                 Can I use your AI plugins for real-time data analysis?
                 </dt>
-                <dd className="mt-2 text-base font-medium text-gray-4 00">
+                <dd className="mt-2 text-base font-medium text-gray-400">
                   Absolutely! Yes, many of our AI plugins support real-time data analysis, allowing you to process and analyze data as it is generated on your server.
                 </dd>
               </div>
@@ -291,13 +291,12 @@ const Home = () => {
               <rect x="14" y="1" width="7" height="6" />
               <rect x="14" y="11" width="7" height="12" />
             </svg>
-              <p className="text-2xl font-bold uppercase">BrainyBolts</p>
-              <p className="mt-2 text-sm font-medium text-gray-500 lg:w-4/5">
+              <p className="text-2xl font-bold uppercase text-black">BrainyBolts</p>
+              <p className="mt-2 text-sm font-medium text-gray-800 lg:w-4/5">
                 A set of
-                <em className="text-accent-600" /> elements, templates &amp; layouts
+                <em className="text-accent-600 text-gray-800"/> AI plugins for powered web
                 <span className="lg:block">
-                  {" "}
-                  made with Tailwind CSS and Alpine.js
+                  made with love
                 </span>
               </p>
             </div>
@@ -317,23 +316,23 @@ const Home = () => {
                 <ul role="list" className="mt-4 space-y-2">
                   <li>
                     <a
-                      href="https://twitter.com/lexingtonthemes"
+                      href="https://twitter.com"
                       className="hover:text-black"
                     >
-                      @lexingtonthemes
+                      <IconBrandLinkedin/>
                     </a>
                   </li>
                   <li>
                     <a
-                      href="https://twitter.com/Mike_Andreuzza"
+                      href="https://github.com"
                       className="hover:text-black"
                     >
-                      @Mike_Andreuzza
+                      <IconBrandGithub/>
                     </a>
                   </li>
                 </ul>
               </div>
-              <div className="mt-12 md:mt-0">
+              {/* <div className="mt-12 md:mt-0">
                 <h3 className="text-base text-black">Premium Themes</h3>
                 <ul role="list" className="mt-4 space-y-2">
                   <li>
@@ -345,23 +344,22 @@ const Home = () => {
                     </a>
                   </li>
                 </ul>
-              </div>
+              </div> */}
             </div>
           </div>
           <div
             className="flex flex-col pt-12 md:flex-row md:items-center md:justify-between"
             x-data="{ year: new Date().getFullYear() }"
           >
-            <span className="text-sm font-medium text-gray-500">
+            <span className="text-sm font-medium text-gray-800">
               Copyright © <span x-text="year">2024</span>
               <a
-                aria-label="Michael Andreuzza"
-                href="#_"
+                aria-label="BRAINYBOLTS"
+                href="/"
                 className="mx-2 text-blue-500 hover:text-gray-500"
               >
-                michael andreuzza
+                BRAINYBOLTS
               </a>
-              Since 1985
             </span>
           </div>
         </div>
