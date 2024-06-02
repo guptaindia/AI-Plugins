@@ -1,6 +1,6 @@
 const express= require('express');
 
-
+const subscriptionRouter = require('./routers/subscriptionRouter');
 const userRouter = require('./routers/userRouter');
 const utilRouter = require('./routers/util');
 const cors = require('cors');
@@ -17,6 +17,7 @@ app.use(cors(
 app.use(express.json());
 app.use('/user',userRouter);  
 app.use('/util',utilRouter);  
+app.use('/email',subscriptionRouter);
 
 app.use(express.static('./static/resources'));
 

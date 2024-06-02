@@ -55,8 +55,8 @@ const UserNavbar = () => {
               >
                 Features
               </a>
-            </li>
-            <li>
+            </li> 
+             <li>
               <a
                 href="/"
                 aria-label="Product pricing"
@@ -180,7 +180,7 @@ const UserNavbar = () => {
                           Features
                         </a>
                       </li>
-                      <li>
+                       <li>
                         <a
                           href="/"
                           aria-label="Product pricing"

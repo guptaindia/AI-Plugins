@@ -2,14 +2,38 @@
 import React from 'react'
 import Wavyground from './wavy-background';
 import Navbar from './(main)/navbar';
+import { useRouter } from 'next/navigation';
+import toast from 'react-hot-toast';
 
 // import CardHoverEffectDemo from './card-hover-effect';
 import { WobbleCardDemo } from './wobble-card';
 // import UserNavbar from './user/user-navbar';
 
 
-
 const Home = () => {
+
+  onSubmit: (values) => {
+    console.log(values);
+    fetch('http://localhost:5000/email/add', {
+              method: 'POST',
+              body : JSON.stringify(values),
+              headers : {
+                  'Content-Type' : 'application/json'
+              }
+
+          })
+          .then((res) => {
+              if(res.status === 200){
+                  toast.success('\Subscribed');
+              }else {
+                  toast.error('error in subscribing')
+              }
+          }).catch((err) => {
+              console.log(err);
+              toast.error('error')
+          });
+  }
+
   return (
     <div className=''>
       <Navbar/>

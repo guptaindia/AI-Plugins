@@ -236,7 +236,7 @@ const Signup = () => {
 
           <div class="text-grey-dark mt-6">
             Already have an account?
-            <a className="no-underline border-b border-blue text-blue" href="../login/">
+            <a className="text-blue-600 decoration-2 hover:underline font-medium dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="../login/">
               Log in
             </a>.
           </div>
