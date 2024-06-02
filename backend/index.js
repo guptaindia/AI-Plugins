@@ -20,6 +20,7 @@ app.use('/util',utilRouter);
 app.use('/email',subscriptionRouter);
 
 app.use(express.static('./static/resources'));
+app.use(express.static('./static/uploads'));
 
 
 app.get('/',(req,res) =>{

@@ -50,6 +50,7 @@ if (toxicityElement) {
       inputElement={inputElement}
       buttonElement={buttonElement}
       outputElement={outputElement}
+      content={toxicityElement.innerHTML}
     >
       <div dangerouslySetInnerHTML={innerHTML} />
     </ToxicityPlugin>

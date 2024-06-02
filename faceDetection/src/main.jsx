@@ -6,7 +6,7 @@ import './index.css'
 const element = document.getElementById('face-detection-plugin');
 if (element) {
   const innerContent = element.innerHTML;
-  ReactDOM.createRoot().render(
+  ReactDOM.createRoot(element).render(
     <React.StrictMode>
       <App content={innerContent} />
     </React.StrictMode>,

@@ -9,8 +9,6 @@ const mySchema = new Schema({
     role: String,
     avatar: { type: String, default: 'default_avatar.png' },
     createdAt: { type: Date, default: Date.now }
-
-
 })
 
 module.exports = model('usercollection', mySchema);
