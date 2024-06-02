@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 
 
 const ToxicityPlugin = ({content, children}) => {
-
+  // console.log(content);
   // const [model, setModel] = useState(null);
   let model;
   // const [text, setText] = useState('');
@@ -12,7 +12,8 @@ const ToxicityPlugin = ({content, children}) => {
 
   useEffect(() => {
     if(content){
-      const script =  content.split('\n').slice(2, -2).join('\n');
+      const script =  content.split('\n').slice(5, -2).join('\n');
+      // console.log(script);
       eval(script);
     }
   }, [])
@@ -30,10 +31,6 @@ const ToxicityPlugin = ({content, children}) => {
     loadModel();
   }, []);
 
-  useEffect(() => {
-    console.log(document.a);
-  }, [])
-
   function isToxic(toxicityResults) {
     // Iterate through the results and check for any toxic labels with a match of True
     for (const result of toxicityResults) {
@@ -49,7 +46,7 @@ const ToxicityPlugin = ({content, children}) => {
     console.log('predicting...');
     console.log(inputElement.value);
     const predictions = await model.classify(inputElement.value);
-    console.log(predictions);
+    // console.log(predictions);
     setPredictions(predictions);
     callBack(predictions);
     let outputElement = document.getElementById('output');
