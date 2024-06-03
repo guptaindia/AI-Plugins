@@ -21,7 +21,7 @@ const Navbar = () => {
             <img
               className="w-8 h-auto rounded-full"
               src={'http://localhost:5000/' + currentUser.avatar}
-              alt="Maria"
+              alt="avatar"
             />
             <span className="text-gray-600 font-medium truncate max-w-[7.5rem] dark:text-neutral-400">
               {currentUser.fullname}
@@ -129,16 +129,7 @@ const Navbar = () => {
                   Features
                 </a>
               </li>
-              <li>
-                <a
-                  href="/"
-                  aria-label="Product pricing"
-                  title="Product pricing"
-                  class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
-                >
-                  Pricing
-                </a>
-              </li>
+             
               <li>
                 <a
                   href="/"
@@ -207,7 +198,7 @@ const Navbar = () => {
                             <rect x="14" y="11" width="7" height="12" />
                           </svg>
                           <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                            Company
+                            Brainybolts
                           </span>
                         </a>
                       </div>
@@ -249,16 +240,7 @@ const Navbar = () => {
                             Features
                           </a>
                         </li>
-                        <li>
-                          <a
-                            href="/"
-                            aria-label="Product pricing"
-                            title="Product pricing"
-                            class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                          >
-                            Pricing
-                          </a>
-                        </li>
+                       
                         <li>
                           <a
                             href="/"

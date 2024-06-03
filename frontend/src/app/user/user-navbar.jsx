@@ -20,7 +20,7 @@ const Navbar = () => {
           >
             <img
               className="w-8 h-auto rounded-full"
-              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
+              src={'http://localhost:5000/' + currentUser.avatar}
               alt="Maria"
             />
             <span className="text-gray-600 font-medium truncate max-w-[7.5rem] dark:text-neutral-400">
@@ -207,7 +207,7 @@ const Navbar = () => {
                             <rect x="14" y="11" width="7" height="12" />
                           </svg>
                           <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                            Company
+                            Brainybolts
                           </span>
                         </a>
                       </div>
