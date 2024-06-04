@@ -58,12 +58,12 @@ const pluginContent = {
     </script>
   </div>
   <script type="module" src="http://localhost:5000/face.js"></script> `,
-    description:'Image classification is a fundamental task in computer vision that involves categorizing an input image into one of several predefined classes or categories. The goal is to teach a machine learning model to recognize and differentiate between different objects or scenes based solely on the visual content of the image',
+    description:'Face detection is a branch of computer vision technology that allows computers to identify and locate human faces in digital images or videos. It acts like a digital bloodhound, sniffing out faces in a crowd, regardless of their orientation or position. This technology forms the foundation for many applications, from unlocking your smartphone with a selfie to enhancing security systems.',
     features: [
-      'clasiification',
-      'clasiification',
-      'Cclasiification',
-      'clasiification',
+      'Attention Detection',
+      'Facial Landmark Detection',
+      'Face locater',
+      'Face position detection',
     ]
   },
 
@@ -103,7 +103,7 @@ const pluginContent = {
     features: [
       'Real-time Speech-to-Text Conversion',
       'Natural Language Understanding',
-      'Noise and Environment Adaptation',
+      'Controls on voice commands',
       'Real-time Processing',
     ]
   },

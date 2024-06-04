@@ -45,9 +45,8 @@ const Home = () => {
     <div className=''>
       <Navbar/>
       <div className='relative bg-[#111827]'>
-
-      <Wavyground title={'Rapidly use modern AI model without ever leaving your code.'} description={'A javascript framework packed with models like gesture, semantic, speech and object detection that can be composed to build on your code, directly on website.'}/>
-      {/* <h1 className='text-2xl md:text-4xl lg:text-5xl text-black font-bold inter-var text-center'>Features</h1> */}
+      <Wavyground title={'Rapidly use modern AI model without ever leaving your code.'} 
+      description={'A javascript framework packed with models like gesture, semantic, speech and object detection that can be composed to build on your code, directly on website.'}/>
       <WobbleCardDemo/>
       <div className='team'>
         <section>
@@ -85,7 +84,7 @@ const Home = () => {
                       <div>
                         <ul role="list" className="flex space-x-5">
                           <li>
-                            <a href="#_" className="text-gray-400 hover:text-gray-500">
+                            <a href="https://github.com/guptaindia" className="text-gray-400 hover:text-gray-500">
                               <IconBrandLinkedin  
                                 name="logo-linkedin"
                                 role="img"
@@ -95,7 +94,7 @@ const Home = () => {
                             </a>
                           </li>
                           <li>
-                            <a href="#_" className="text-gray-400 hover:text-gray-500">
+                            <a href="www.linkedin.com/in/guptaindia" className="text-gray-400 hover:text-gray-500">
                               <span className="sr-only"> Twitter </span>
                               <IconBrandGithub
                                 name="logo-github"
@@ -186,7 +185,8 @@ const Home = () => {
                 Are your AI plugins compatible with all website platforms?
                 </dt>
                 <dd className="mt-2 text-base font-medium text-gray-400">
-                Our AI plugins are designed to be compatible with most major website platforms, its is just a html code with some javascript so it can work on any platform which uses these.
+                Our AI plugins are designed to be compatible with most major website platforms,
+                 its is just a html code with some javascript so it can work on any platform which uses these.
                 </dd>
               </div>
               <div>
@@ -194,7 +194,8 @@ const Home = () => {
                 How do I install an AI plugin on my website?
                 </dt>
                 <dd className="mt-2 text-base font-medium text-gray-400">
-              Generally, you will need to copy the code, paste it to your website platform, and use the functionality by using the callbacks provided on the console.
+              Generally, you will need to copy the code, paste it to your website platform,
+               and use the functionality by using the callbacks provided on the console.
                 </dd>
               </div>
               <div>
@@ -202,7 +203,9 @@ const Home = () => {
                 Can I customize the AI plugins to fit my website’s design and functionality?
                 </dt>
                 <dd className="mt-2 text-base font-medium text-gray-400">
-                Yes, our AI plugins are highly customizable. You can adjust their appearance, behavior, and integration points to match your website’s design and functionality. Detailed customization options are provided in the plugin documentation.
+                Yes, our AI plugins are highly customizable. You can adjust their appearance, behavior,
+                 and integration points to match your website’s design and functionality. Detailed customization
+                  options are provided in the plugin documentation.
                 </dd>
               </div>
               <div>
@@ -210,7 +213,8 @@ const Home = () => {
                 Are there any limitations to the AI features provided by your plugins?
                 </dt>
                 <dd className="mt-2 text-base font-medium text-gray-400">
-                While our AI plugins are powerful, they do have some limitations based on the current state of AI technology and specific use cases.
+                While our AI plugins are powerful, they do have some limitations based on the 
+                current state of AI technology and specific use cases.
                 </dd>
               </div>
               <div>
@@ -218,7 +222,8 @@ const Home = () => {
                 Can I use your AI plugins for real-time data analysis?
                 </dt>
                 <dd className="mt-2 text-base font-medium text-gray-400">
-                  Absolutely! Yes, many of our AI plugins support real-time data analysis, allowing you to process and analyze data as it is generated on your server.
+                  Absolutely! Yes, many of our AI plugins support real-time data analysis,
+                   allowing you to process and analyze data as it is generated on your server.
                 </dd>
               </div>
             </dl>
@@ -257,7 +262,9 @@ const Home = () => {
                         placeholder="Enter your email"
                         aria-describedby="emailHelp"
                         required=""
-                        className="block w-full h-12 px-4 py-2 duration-200 border rounded-lg appearance-none bg-chalk border-zinc-300 text-accent-500 placeholder-zinc-300 focus:border-zinc-300 focus:outline-none focus:ring-zinc-300 sm:text-sm"
+                        className="block w-full h-12 px-4 py-2 duration-200 border rounded-lg appearance-none
+                         bg-chalk border-zinc-300 text-accent-500 placeholder-zinc-300 focus:border
+                        -zinc-300 focus:outline-none focus:ring-zinc-300 sm:text-sm"
                         fdprocessedid="r6t0j"
                       />
                       <span id="emailHelp" className="sr-only">
@@ -266,7 +273,9 @@ const Home = () => {
                       <button
                         type="submit"
                         aria-label="Primary action"
-                        className="inline-flex items-center justify-center w-full h-12 gap-3 px-5 py-3 font-medium text-white duration-200 bg-gray-900 rounded-xl hover:bg-gray-700 focus:ring-2 focus:ring-offset-2 focus:ring-black"
+                        className="inline-flex items-center justify-center w-full h-12 gap-3 px-5 py-3 font-medium
+                         text-white duration-200 bg-gray-900 rounded-xl hover:bg-gray-700 focus:ring-2 focus:ring-offset-2
+                          focus:ring-black"
                         fdprocessedid="vg55m"
                       >
                         Subscribe
@@ -307,7 +316,8 @@ const Home = () => {
                 </span>
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-8 mt-12 text-sm font-medium text-gray-500 lg:grid-cols-3 lg:mt-0 xl:col-span-2">
+            <div className="grid grid-cols-2 gap-8 mt-12 text-sm font-medium text-gray-500
+             lg:grid-cols-3 lg:mt-0 xl:col-span-2">
               <div>
                 <h3 className="text-base text-black">Information</h3>
                 <ul role="list" className="mt-4 space-y-2">
@@ -339,19 +349,6 @@ const Home = () => {
                   </li>
                 </ul>
               </div>
-              {/* <div className="mt-12 md:mt-0">
-                <h3 className="text-base text-black">Premium Themes</h3>
-                <ul role="list" className="mt-4 space-y-2">
-                  <li>
-                    <a
-                      href="https://lexingtonthemes.com/"
-                      className="hover:text-black"
-                    >
-                      Lexington Themes
-                    </a>
-                  </li>
-                </ul>
-              </div> */}
             </div>
           </div>
           <div
@@ -371,11 +368,9 @@ const Home = () => {
           </div>
         </div>
       </footer>
-
       </div>
       </div>
     </div>
-
   )
 }
 
