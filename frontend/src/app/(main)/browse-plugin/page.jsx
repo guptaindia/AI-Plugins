@@ -24,7 +24,7 @@ const BrowsePlugin = () => {
                             <ThreeDCard title={'Gesture recognition'} description={'browse model'} imageUrl={'/cardImg3.jpg'} link={'/user/pluginDetails/gesture-recognition'}/>
                         </div>
                         <div className=''>
-                            <ThreeDCard title={'Face Detection'} description={'browse model'} imageUrl={'/cardImg7.jpg'} link={'/user/pluginDetails/image-classification'}/>
+                            <ThreeDCard title={'Face Detection'} description={'browse model'} imageUrl={'/cardImg7.jpg'} link={'/user/pluginDetails/Face-Detection'}/>
                         </div>
                         <div className=''>
                         <ThreeDCard title={'Toxicity detection'} description={'browse model'} imageUrl={'/cardImg5.jpg'} link={'/user/pluginDetails/toxicity-detection'}/>

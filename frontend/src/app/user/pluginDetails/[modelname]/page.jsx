@@ -9,7 +9,15 @@ import { useParams } from 'next/navigation';
 const pluginContent = {
   'object-detection': {
     title: "Object Detection",
-    code: ``,
+    code: `<div id="object-detection-plugin">
+    <script>
+    callBack = (value) => {
+      console.log(value);
+    } 
+    </script>
+  </div>
+  <script type="module" src="http://localhost:5000/main.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>`,
     image: '/cardImg2.jpg',
     description: 'An object detection model is a computer vision algorithm designed to identify and locate multiple objects within an image or a video frame. It involves both classification (identifying what object or objects are present) and localization (drawing bounding boxes around the detected objects). ',
     features: [
@@ -22,8 +30,15 @@ const pluginContent = {
   'gesture-recognition': {
     title: "Gesture Recognition",
     image: '/cardImg3.jpg',
-    code: `<div id="gesture-recognition-plugin"></div>
-    <script type="module" src="http://localhost:5000/main.js"></script>`,
+    code: ` <div id="gesture-recognition-plugin">
+    <script>
+    callBack = (value) => {
+      console.log(value);
+    }
+  </script>
+  </div>
+  <script type="module" src="http://localhost:5000/main.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>`,
     description: 'Gesture recognition is the process of understanding human gestures through computational algorithms, typically using computer vision or machine learning techniques. It involves interpreting movements of the body, hands, fingers, or face to recognize specific gestures that convey meaning or commands',
     features: [
       'Gesture Mapping to Actions',
@@ -35,7 +50,14 @@ const pluginContent = {
   'Face-Detection': {
     title: "Face-Detection",
     image: '/cardImg4.jpg',
-    code: ``,
+    code: `<div id="face-detection-plugin">
+    <script>
+      callBack = (value) => {
+        console.log(value);
+      }
+    </script>
+  </div>
+  <script type="module" src="http://localhost:5000/face.js"></script> `,
     description:'Image classification is a fundamental task in computer vision that involves categorizing an input image into one of several predefined classes or categories. The goal is to teach a machine learning model to recognize and differentiate between different objects or scenes based solely on the visual content of the image',
     features: [
       'clasiification',
@@ -68,7 +90,15 @@ const pluginContent = {
   'speech-model': {
     title: "speech-model",
     image: '/cardImg6.jpg',
-    code: ``,
+    code: ` <div id="voice-recognition">
+    <script>
+    callBack = (value) => {
+      console.log(value);
+    }
+  </script>
+  </div>
+  <script type="module" src="http://localhost:5000/main.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script> `,
     description: 'A speech model, in the context of artificial intelligence and machine learning, refers to a system designed to process and understand spoken language. This encompasses various tasks related to speech recognition, speech synthesis, and natural language processing (NLP).',
     features: [
       'Real-time Speech-to-Text Conversion',

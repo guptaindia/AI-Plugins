@@ -65,8 +65,7 @@ const Signup = () => {
       <div className=" bg-grey-lighter min-h-screen flex flex-col ">
         <div className=" container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
           <div className=" px-6 py-8 bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-gray-800 dark:border-gray-700 ">
-            <span className='whitespace-nowrap'>
-              <h2 className="mb-8 text-center block text-3xl font-bold text-gray-800 dark:text-white">
+            <div className="flex mb-8">
                 {/* <img className="h-20 m-auto" src="\iconsign.webp" /> */}
                 <svg
                   class="w-8 text-deep-purple-accent-400"
@@ -83,8 +82,9 @@ const Signup = () => {
                   <rect x="14" y="1" width="7" height="6" />
                   <rect x="14" y="11" width="7" height="12" />
                 </svg>
-                BRAINYBOLTS</h2>
-            </span>
+              <span  className="ms-3 text-center block text-3xl font-bold text-gray-800 dark:text-white">
+                BRAINYBOLTS</span>
+                </div>
 
             <div>
 
