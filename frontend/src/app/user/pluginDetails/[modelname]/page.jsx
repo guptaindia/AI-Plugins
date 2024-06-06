@@ -74,10 +74,12 @@ const pluginContent = {
     <input type="text" id="text-input">
     <button id="trigger">Make Prediction</button>
     <p id="output"></p>
-  </div>
-  <script type="module" src="http://localhost:5000/main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/toxicity"></script>`,
+    <script>
+      callBack = (value) => {
+        console.log(value);
+      }
+    </script>
+  </div>`,
     description: 'Toxicity detection, also known as toxic comment classification, is the task of identifying and flagging inappropriate, offensive, or harmful content within text data. This is particularly relevant in online platforms where user-generated content can include abusive language, hate speech, harassment, or other forms of harmful communication. The goal of toxicity detection is to automatically classify text inputs into categories like "toxic" or "non-toxic" based on their content.',
     features: [
       'Text Input Interface:',

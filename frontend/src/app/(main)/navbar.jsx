@@ -119,20 +119,20 @@ const Navbar = () => {
                   Product
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <a
-                  href="#features"
+                  href=""
                   aria-label="Our product"
                   title="Our product"
                   class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
                 >
                   Features
                 </a>
-              </li>
+              </li> */}
              
               <li>
                 <a
-                  href="/"
+                  href="/about"
                   aria-label="About us"
                   title="About us"
                   class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
@@ -222,7 +222,7 @@ const Navbar = () => {
                       <ul class="space-y-4">
                         <li>
                           <a
-                            href="/"
+                            href="/browse-plugin"
                             aria-label="Our product"
                             title="Our product"
                             class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -230,7 +230,7 @@ const Navbar = () => {
                             Product
                           </a>
                         </li>
-                        <li>
+                        {/* <li>
                           <a
                             href="/"
                             aria-label="Our product"
@@ -239,11 +239,11 @@ const Navbar = () => {
                           >
                             Features
                           </a>
-                        </li>
+                        </li> */}
                        
                         <li>
                           <a
-                            href="/"
+                            href="/about"
                             aria-label="About us"
                             title="About us"
                             class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"

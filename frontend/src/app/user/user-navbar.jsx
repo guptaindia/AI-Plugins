@@ -119,7 +119,7 @@ const Navbar = () => {
                   Product
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <a
                   href="#features"
                   aria-label="Our product"
@@ -128,8 +128,8 @@ const Navbar = () => {
                 >
                   Features
                 </a>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <a
                   href="/"
                   aria-label="Product pricing"
@@ -138,10 +138,10 @@ const Navbar = () => {
                 >
                   Pricing
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a
-                  href="/"
+                  href="/about"
                   aria-label="About us"
                   title="About us"
                   class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
@@ -239,7 +239,7 @@ const Navbar = () => {
                             Product
                           </a>
                         </li>
-                        <li>
+                        {/* <li>
                           <a
                             href="/"
                             aria-label="Our product"
@@ -248,7 +248,7 @@ const Navbar = () => {
                           >
                             Features
                           </a>
-                        </li>
+                        </li> */}
                         <li>
                           <a
                             href="/"
